@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>出版社特價書單選書</title>
+<meta name="description" content="從 1,792 本出版社特價書中，依網路口碑、得獎紀錄與社群推薦篩出的兩份書單。">
+<meta property="og:title" content="出版社特價書單選書">
+<meta property="og:description" content="從 1,792 本出版社特價書中篩出的兩份書單：給 3 歲與新生兒家庭的 30 本，給大人的 50 本。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --paper:#EDEEEA; --card:#F8F8F5; --ink:#1E2124; --ink-2:#4C5257; --ink-3:#868C8A;
+    --rule:#D6D8D2; --teal:#245B56; --ox:#7B2E2E;
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    --serif:"Noto Serif TC","Songti TC","PMingLiU",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --paper:#15181A; --card:#1D2124; --ink:#E6E8E3; --ink-2:#A9B0AE; --ink-3:#7C8482;
+      --rule:#2E3438; --teal:#78B7AE; --ox:#DB9494;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--serif);font-size:16px;line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:64px 22px 96px}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--ox);margin:0 0 20px;
+  }
+  h1{
+    font-family:var(--sans);font-weight:900;font-size:clamp(30px,5.5vw,46px);
+    line-height:1.15;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance;
+  }
+  .dek{font-size:16.5px;color:var(--ink-2);max-width:36em;margin:0 0 44px}
+  .dek b{color:var(--ink);font-weight:600}
+
+  .cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  a.card{
+    display:block;background:var(--card);border:1px solid var(--rule);
+    padding:26px 26px 24px;text-decoration:none;color:inherit;
+    transition:border-color .14s ease, transform .14s ease;
+  }
+  a.card:hover{border-color:var(--teal);transform:translateY(-2px)}
+  a.card:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+  a.card .tag{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-3);display:block;margin-bottom:12px;
+  }
+  a.card h2{
+    font-family:var(--sans);font-weight:700;font-size:22px;margin:0 0 10px;letter-spacing:-.005em;
+  }
+  a.card p{margin:0 0 18px;font-size:14.8px;color:var(--ink-2)}
+  a.card .figs{
+    font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12px;
+    color:var(--teal);font-weight:700;border-top:1px solid var(--rule);padding-top:12px;
+  }
+  footer{
+    margin-top:56px;padding-top:18px;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-3);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">選書報告</p>
+  <h1>出版社特價書單選書</h1>
+  <p class="dek">一份 <b>1,792 本</b>的出版社特價書單，全品項特價一律 <b>NT$150</b>。因為價格統一，選書的重點不是比價，而是比「值不值得帶回家」。以下兩份清單分別依網路口碑、得獎紀錄與社群推薦度篩出，每一筆都附上可查證的來源。</p>
+
+  <div class="cards">
+    <a class="card" href="kids.html">
+      <span class="tag">給孩子與新手爸媽</span>
+      <h2>雙寶書單三十選</h2>
+      <p>為一個大寶三歲、二寶剛出生的家庭挑的 30 本：新生兒視覺卡、幼兒互動繪本、手足調適、情緒與安全，加上五本爸媽自己的工具書。</p>
+      <div class="figs">30 本 · 定價 9,948 → 4,500 · 省 5,448</div>
+    </a>
+
+    <a class="card" href="adults.html">
+      <span class="tag">給大人</span>
+      <h2>大人書單五十選</h2>
+      <p>從成人類 1,264 本中，只留下拿過重要獎項、國際或台灣長期暢銷、以及已被時間認定的經典。主推 30 本＋遺珠 20 本。</p>
+      <div class="figs">50 本 · 定價 25,540 → 7,500 · 省 18,040</div>
+    </a>
+  </div>
+
+  <footer>兩份清單的書名、ISBN、定價與特價皆已逐筆比對原始特價檔案 · 整理於 2026 年 9 月</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="從 1,264 本成人特價書中依得獎紀錄與口碑篩出的 30 + 20 本書單。">
+<meta property="og:title" content="大人書單五十選">
+<meta property="og:description" content="從 1,264 本成人特價書中依得獎紀錄與口碑篩出的 30 + 20 本書單。">
+<meta property="og:type" content="article">
+<title>大人書單五十選</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+<style>
+  :root{
+    --paper:#EDEEEA;
+    --card:#F8F8F5;
+    --ink:#1E2124;
+    --ink-2:#4C5257;
+    --ink-3:#868C8A;
+    --rule:#D6D8D2;
+    --rule-soft:#E3E5DF;
+    --ox:#7B2E2E;
+    --ox-soft:#F1E3E1;
+    --teal:#245B56;
+    --teal-soft:#DCE7E4;
+    --bar:#245B56;
+    --bar-bg:#D6DCD8;
+
+    --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    --serif:"Noto Serif TC","Songti TC","PMingLiU",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15181A;
+      --card:#1D2124;
+      --ink:#E6E8E3;
+      --ink-2:#A9B0AE;
+      --ink-3:#7C8482;
+      --rule:#2E3438;
+      --rule-soft:#252A2D;
+      --ox:#DB9494;
+      --ox-soft:#2E2022;
+      --teal:#78B7AE;
+      --teal-soft:#1A2624;
+      --bar:#78B7AE;
+      --bar-bg:#2A3134;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15181A;
+    --card:#1D2124;
+    --ink:#E6E8E3;
+    --ink-2:#A9B0AE;
+    --ink-3:#7C8482;
+    --rule:#2E3438;
+    --rule-soft:#252A2D;
+    --ox:#DB9494;
+    --ox-soft:#2E2022;
+    --teal:#78B7AE;
+    --teal-soft:#1A2624;
+    --bar:#78B7AE;
+    --bar-bg:#2A3134;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:16px;
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px 100px}
+
+  /* ---------- masthead ---------- */
+  header.mast{padding:56px 0 32px;border-bottom:2px solid var(--ink);margin-bottom:36px}
+  .eyebrow{
+    font-family:var(--mono);font-size:11px;font-weight:500;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--ox);
+    margin:0 0 20px;
+  }
+  h1{
+    font-family:var(--sans);font-weight:900;
+    font-size:clamp(32px,6vw,52px);line-height:1.12;
+    letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance;
+  }
+  .dek{font-size:16.5px;color:var(--ink-2);max-width:38em;margin:0 0 30px}
+  .dek b{color:var(--ink);font-weight:600}
+
+  .ledger{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:0;border-top:1px solid var(--rule);
+  }
+  .lg{padding:14px 18px 14px 0;border-right:1px solid var(--rule)}
+  .lg:last-child{border-right:0}
+  .lg dt{
+    font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-3);margin:0 0 5px;
+  }
+  .lg dd{
+    margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-weight:700;font-size:20px;letter-spacing:-.02em;
+  }
+  .lg dd.t{color:var(--teal)}
+  .lg dd small{font-size:11px;font-weight:400;color:var(--ink-3);letter-spacing:0}
+
+  /* ---------- method ---------- */
+  .method{
+    background:var(--card);border:1px solid var(--rule);
+    padding:22px 26px;margin:0 0 44px;font-size:15px;color:var(--ink-2);
+  }
+  .method p{margin:0 0 10px}
+  .method p:last-child{margin:0}
+  .method code{
+    font-family:var(--mono);font-size:12.5px;color:var(--ink);
+    background:var(--rule-soft);padding:1px 5px;
+  }
+
+  /* ---------- top savings chart ---------- */
+  .chart{margin:0 0 48px}
+  .chart h2{
+    font-family:var(--sans);font-weight:700;font-size:15px;
+    letter-spacing:.02em;margin:0 0 4px;
+  }
+  .chart .sub{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin:0 0 18px}
+  .crow{
+    display:grid;grid-template-columns:minmax(0,15em) 1fr auto;
+    align-items:center;gap:14px;padding:6px 0;
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .crow .nm{
+    font-family:var(--sans);font-size:13.5px;font-weight:500;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .track{height:9px;background:var(--bar-bg);position:relative}
+  .track span{display:block;height:100%;background:var(--bar)}
+  .crow .amt{
+    font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:12.5px;font-weight:700;color:var(--teal);white-space:nowrap;
+  }
+
+  /* ---------- sections ---------- */
+  section{margin:0 0 44px}
+  .sec-head{border-bottom:1px solid var(--ink);padding-bottom:9px;margin-bottom:4px}
+  .sec-head h2{
+    font-family:var(--sans);font-weight:900;font-size:21px;
+    margin:0;letter-spacing:-.005em;display:flex;align-items:baseline;
+    gap:12px;flex-wrap:wrap;
+  }
+  .sec-head h2 em{
+    font-style:normal;font-family:var(--mono);font-size:11px;font-weight:500;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+  }
+  .sec-note{font-size:14.5px;color:var(--ink-3);margin:10px 0 0}
+
+  /* ---------- entries ---------- */
+  ol.list{list-style:none;margin:0;padding:0}
+  li.bk{
+    display:grid;grid-template-columns:auto 1fr;gap:0 16px;
+    padding:22px 0;border-bottom:1px solid var(--rule-soft);
+  }
+  li.bk:last-child{border-bottom:0}
+  .gutter{
+    grid-row:1 / span 3;display:flex;flex-direction:column;
+    align-items:center;gap:9px;padding-top:4px;
+  }
+  .idx{
+    font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:11.5px;font-weight:700;color:var(--ink-3);width:2.4ch;text-align:right;
+  }
+  .gutter input{
+    appearance:none;-webkit-appearance:none;width:15px;height:15px;margin:0;
+    border:1.5px solid var(--rule);background:var(--card);cursor:pointer;
+    display:grid;place-content:center;transition:background .12s,border-color .12s;
+  }
+  .gutter input:hover{border-color:var(--teal)}
+  .gutter input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+  .gutter input:checked{background:var(--teal);border-color:var(--teal)}
+  .gutter input:checked::after{
+    content:"";width:7.5px;height:4px;
+    border-left:2px solid var(--card);border-bottom:2px solid var(--card);
+    transform:translateY(-1px) rotate(-45deg);
+  }
+  li.bk.done > div{opacity:.4}
+
+  .top{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .ttl{
+    font-family:var(--sans);font-weight:700;font-size:19px;line-height:1.42;
+    margin:0;letter-spacing:-.005em;text-wrap:balance;
+  }
+  .pr{
+    font-family:var(--mono);font-variant-numeric:tabular-nums;
+    font-size:12.5px;white-space:nowrap;color:var(--ink-3);
+  }
+  .pr b{color:var(--teal);font-weight:700;font-size:14px}
+  .pr .sv{color:var(--ox);font-weight:500}
+  .meta{
+    font-family:var(--mono);font-size:11px;color:var(--ink-3);
+    margin:6px 0 11px;letter-spacing:.01em;
+  }
+  .meta span + span::before{content:" / ";color:var(--rule)}
+
+  .badges{margin:0 0 10px;display:flex;gap:6px;flex-wrap:wrap}
+  .bg{
+    font-family:var(--mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;
+    padding:3px 8px;background:var(--ox-soft);color:var(--ox);
+    border:1px solid transparent;white-space:nowrap;
+  }
+  .bg.t{background:var(--teal-soft);color:var(--teal)}
+
+  .why{margin:0;font-size:15.4px;color:var(--ink)}
+  .why b{font-weight:600}
+  .why .pf{
+    display:block;margin-top:8px;font-size:14.2px;color:var(--ink-2);
+    padding-left:13px;border-left:2px solid var(--rule);
+  }
+
+  /* ---------- compact list for the 20 ---------- */
+  li.bk.mini{padding:15px 0}
+  li.bk.mini .ttl{font-size:16.5px}
+  li.bk.mini .why{font-size:14.6px}
+
+  /* ---------- panels ---------- */
+  .panel{background:var(--card);border:1px solid var(--rule);padding:24px 26px;margin:0 0 22px}
+  .panel h3{font-family:var(--sans);font-weight:700;font-size:17px;margin:0 0 12px}
+  .panel ul{margin:0;padding-left:1.15em}
+  .panel li{margin-bottom:9px;font-size:14.8px;color:var(--ink-2)}
+  .panel li:last-child{margin-bottom:0}
+  .panel li b{color:var(--ink);font-weight:600}
+
+  a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+  .srcs{columns:2;column-gap:34px;font-size:12.8px;line-height:1.7;color:var(--ink-2)}
+  .srcs p{margin:0 0 8px;break-inside:avoid}
+  footer.foot{
+    margin-top:46px;padding-top:18px;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-3);
+  }
+  @media (max-width:660px){
+    .srcs{columns:1}
+    .crow{grid-template-columns:minmax(0,9em) 1fr auto;gap:10px}
+    .lg{border-right:0;border-bottom:1px solid var(--rule)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="mast">
+  <p class="eyebrow">出版社特價書單 · 成人書篩選報告</p>
+  <h1>大人書單五十選</h1>
+  <p class="dek">同一份特價書單，這次篩的是給大人的。從 <b>1,264 本</b>成人類書目中，只留下三種：<b>拿過重要獎項</b>、<b>國際或台灣長期暢銷</b>、<b>已被時間認定的經典</b>。全品項特價一律 NT$150，所以定價愈高的書折扣愈深——這份清單刻意把折扣最深的好書放在前面。</p>
+  <dl class="ledger">
+    <div class="lg"><dt>主推</dt><dd>30 <small>本</small></dd></div>
+    <div class="lg"><dt>遺珠</dt><dd>20 <small>本</small></dd></div>
+    <div class="lg"><dt>定價合計</dt><dd>25,540</dd></div>
+    <div class="lg"><dt>特價合計</dt><dd class="t">7,500</dd></div>
+    <div class="lg"><dt>省下</dt><dd class="t">18,040</dd></div>
+    <div class="lg"><dt>平均折數</dt><dd>2.9 <small>折</small></dd></div>
+  </dl>
+</header>
+
+<div class="method">
+  <p><b>篩選路徑</b>：<code>1,792 本</code> → 取文學小說 393、人文科普 284、心理勵志 247、生活娛樂 209、商業財經 131，共 <code>1,264 本</code> → 逐筆比對得獎紀錄、國際暢銷榜、台灣書市長銷狀況與社群討論度 → 排除考試用書、養生偏方、寫真集、命理風水、系列中缺集的作品（例如《沙丘》清單裡只有第 2–6 集，缺首部曲）→ 主推 <code>30 本</code> ＋ 遺珠 <code>20 本</code>。</p>
+  <p>每一筆的獎項與暢銷數字都附了可查證的來源，列在頁面最後。書名、ISBN、定價已逐筆對回原始檔案。</p>
+</div>
+
+<!-- ================= chart ================= -->
+<div class="chart">
+  <h2>折扣最深的八本（主推清單內）</h2>
+  <p class="sub">全品項特價 NT$150，橫條長度＝省下的金額</p>
+
+  <div class="crow"><span class="nm">英倫魔法師（上下卷）</span><span class="track"><span style="width:100%"></span></span><span class="amt">省 890</span></div>
+  <div class="crow"><span class="nm">瘟疫與文明</span><span class="track"><span style="width:82%"></span></span><span class="amt">省 730</span></div>
+  <div class="crow"><span class="nm">野火：揭開氣候災難的序幕</span><span class="track"><span style="width:64%"></span></span><span class="amt">省 570</span></div>
+  <div class="crow"><span class="nm">基因：人類最親密的歷史</span><span class="track"><span style="width:60%"></span></span><span class="amt">省 530</span></div>
+  <div class="crow"><span class="nm">從苦力貿易到排華</span><span class="track"><span style="width:60%"></span></span><span class="amt">省 530</span></div>
+  <div class="crow"><span class="nm">城與不確定的牆</span><span class="track"><span style="width:60%"></span></span><span class="amt">省 530</span></div>
+  <div class="crow"><span class="nm">雲端咕咕國</span><span class="track"><span style="width:60%"></span></span><span class="amt">省 530</span></div>
+  <div class="crow"><span class="nm">人慈</span><span class="track"><span style="width:51%"></span></span><span class="amt">省 450</span></div>
+</div>
+
+<!-- ================= 1. 當代得獎小說 ================= -->
+<section>
+  <div class="sec-head"><h2>當代得獎小說<em>8 本 · 定價 3,980 → 1,200</em></h2></div>
+  <p class="sec-note">這一組全部有明確的國際獎項紀錄可查，而且多數已被改編成影集或電影——是那種「買了就會讀完」的類型。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a1">
+      <div class="gutter"><span class="idx">01</span><input type="checkbox" aria-label="已選 呼喚奇蹟的光"></div>
+      <div class="top"><h3 class="ttl">呼喚奇蹟的光（暢銷新版）</h3><p class="pr"><s>550</s> → <b>150</b> <span class="sv">省 400</span></p></div>
+      <div>
+        <p class="meta"><span>安東尼‧杜爾</span><span>時報文化</span><span>9786263536609</span></p>
+        <p class="badges"><span class="bg">2015 普立茲小說獎</span><span class="bg">安德魯卡內基獎章</span><span class="bg t">Netflix 影集</span></p>
+        <p class="why">二戰、一個失明的法國女孩、一個擅長修無線電的德國男孩。杜爾寫了十年，短章節、幾乎每一節都能單獨讀完——<b>這是少數「文學獎作品」但讀起來完全不費力的書</b>。
+        <span class="pf">2015 年普立茲小說獎得主，普立茲委員會的評語是以「富有想像力且精緻」的方式捕捉二戰的殘酷；同年並獲美國圖書館協會安德魯卡內基小說獎章。2023 年由 Netflix 改編為影集。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a2">
+      <div class="gutter"><span class="idx">02</span><input type="checkbox" aria-label="已選 英倫魔法師"></div>
+      <div class="top"><h3 class="ttl">英倫魔法師（紀念新版，上下卷不分售）</h3><p class="pr"><s>1040</s> → <b>150</b> <span class="sv">省 890</span></p></div>
+      <div>
+        <p class="meta"><span>蘇珊娜‧克拉克</span><span>時報文化</span><span>9786263742840</span></p>
+        <p class="badges"><span class="bg">雨果獎最佳長篇小說</span><span class="bg">世界奇幻獎</span><span class="bg t">全清單折扣最深</span></p>
+        <p class="why"><b>整份特價書單裡最划算的一筆：150 元買到上下兩卷、定價 1,040 的紀念新版。</b>十九世紀英國，魔法重回人間——寫得像珍‧奧斯汀與狄更斯合寫了一本奇幻史詩，還有大量惡趣味的假學術註腳。
+        <span class="pf">克拉克的處女作，獲雨果獎最佳長篇小說，並改編為 BBC 影集。她十年後的第二本書《皮拉奈奇》拿下女性小說獎（見下一筆）——這是一位「兩本都得獎」的作者。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a3">
+      <div class="gutter"><span class="idx">03</span><input type="checkbox" aria-label="已選 皮拉奈奇"></div>
+      <div class="top"><h3 class="ttl">皮拉奈奇</h3><p class="pr"><s>400</s> → <b>150</b> <span class="sv">省 250</span></p></div>
+      <div>
+        <p class="meta"><span>蘇珊娜‧克拉克</span><span>時報文化</span><span>9786263743366</span></p>
+        <p class="badges"><span class="bg">2021 女性小說獎首獎</span></p>
+        <p class="why">一個人住在一座無限延伸、有潮水灌進來的巨大房子裡，逐間記錄雕像。<b>薄、安靜、結構精巧</b>，跟《英倫魔法師》的體積形成極端對比，很適合當睡前一章一章讀。
+        <span class="pf">2021 年英國女性小說獎（Women's Prize for Fiction）首獎，同屆入圍名單包含 Brit Bennett《The Vanishing Half》與 Yaa Gyasi《Transcendent Kingdom》。克拉克在長達十年的病中寫成此書。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a4">
+      <div class="gutter"><span class="idx">04</span><input type="checkbox" aria-label="已選 夜晚的血都是黑的"></div>
+      <div class="top"><h3 class="ttl">夜晚的血都是黑的</h3><p class="pr"><s>360</s> → <b>150</b> <span class="sv">省 210</span></p></div>
+      <div>
+        <p class="meta"><span>大衛‧迪奧</span><span>潮浪</span><span>9786269826285</span></p>
+        <p class="badges"><span class="bg">2021 國際布克獎</span><span class="bg">龔固爾高中生獎</span><span class="bg">LA Times 小說獎</span></p>
+        <p class="why">一次大戰，法軍中的塞內加爾士兵，看著兒時好友死在陣前之後一路走向瘋狂。<b>薄薄一本，但語言像鼓聲</b>，把殖民史與戰爭史扣在一起。
+        <span class="pf">迪奧是首位獲國際布克獎的法語作家、也是首位非洲裔得主，5 萬英鎊獎金與譯者對分。法國原版另獲龔固爾高中生文學獎與洛杉磯時報小說獎。作者現為法國波城大學十八世紀文學教授。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a5">
+      <div class="gutter"><span class="idx">05</span><input type="checkbox" aria-label="已選 像這樣的小事"></div>
+      <div class="top"><h3 class="ttl">像這樣的小事</h3><p class="pr"><s>320</s> → <b>150</b> <span class="sv">省 170</span></p></div>
+      <div>
+        <p class="meta"><span>克萊爾‧吉根</span><span>時報文化</span><span>9786263969902</span></p>
+        <p class="badges"><span class="bg">2022 布克獎決選</span><span class="bg">歐威爾政治小說獎</span><span class="bg t">Cillian Murphy 主演</span></p>
+        <p class="why">1980 年代愛爾蘭小鎮，一個煤炭商在修女院的柴房發現一個發抖的女孩。<b>全書 116 頁，是布克獎歷史上最短的入圍作品</b>——一個晚上讀完，但會想很久。
+        <span class="pf">2022 年布克獎決選六強，同屆對手包含 Elizabeth Strout 與 Percival Everett。另已獲凱瑞集團愛爾蘭年度小說獎與歐威爾政治小說獎，並入圍 Rathbones Folio Prize。電影版由 Cillian Murphy 主演。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a6">
+      <div class="gutter"><span class="idx">06</span><input type="checkbox" aria-label="已選 正常人"></div>
+      <div class="top"><h3 class="ttl">正常人</h3><p class="pr"><s>380</s> → <b>150</b> <span class="sv">省 230</span></p></div>
+      <div>
+        <p class="meta"><span>莎莉‧魯尼</span><span>時報文化</span><span>9789571382371</span></p>
+        <p class="badges"><span class="bg">Costa 年度小說獎</span><span class="bg">布克獎長名單</span><span class="bg t">40+ 語言 · 影集 4 項艾美提名</span></p>
+        <p class="why">兩個愛爾蘭年輕人從高中到大學反覆靠近又錯開。<b>對話幾乎沒有引號、情緒卻精準到讓人不舒服</b>——這是過去十年最被談論的英語小說之一。
+        <span class="pf">獲 Costa 年度最佳小說獎、入圍布克獎長名單，並被《TIME》選入 2019 年 100 本必讀書；已譯成 40 種以上語言。2020 年 BBC Three／Hulu 影集獲 4 項艾美獎提名，《衛報》稱這本書「幾乎成了一部聖典」。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a7">
+      <div class="gutter"><span class="idx">07</span><input type="checkbox" aria-label="已選 老虎的妻子"></div>
+      <div class="top"><h3 class="ttl">老虎的妻子（暢銷新版）</h3><p class="pr"><s>380</s> → <b>150</b> <span class="sv">省 230</span></p></div>
+      <div>
+        <p class="meta"><span>蒂亞‧歐布萊特</span><span>時報文化</span><span>9786263749115</span></p>
+        <p class="badges"><span class="bg">2011 柑橘小說獎</span><span class="bg">美國國家圖書獎決選</span></p>
+        <p class="why">巴爾幹半島，一個年輕醫生追查祖父的死，故事一路長進民間傳說裡。<b>寫實與魔幻交纏得很自然</b>，是那種讀完會想去查地圖與歷史的小說。
+        <span class="pf">歐布萊特以 25 歲成為柑橘小說獎（Orange Prize，即今女性小說獎）史上最年輕得主；本書並入圍美國國家圖書獎與狄倫‧湯瑪斯獎，是國際暢銷書。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a8">
+      <div class="gutter"><span class="idx">08</span><input type="checkbox" aria-label="已選 可憐的東西"></div>
+      <div class="top"><h3 class="ttl">可憐的東西</h3><p class="pr"><s>550</s> → <b>150</b> <span class="sv">省 400</span></p></div>
+      <div>
+        <p class="meta"><span>阿拉斯代爾‧格雷</span><span>時報文化</span><span>9786263966215</span></p>
+        <p class="badges"><span class="bg">Whitbread Award</span><span class="bg">衛報小說獎</span><span class="bg t">電影奧斯卡影后</span></p>
+        <p class="why">維多利亞時代的蘇格蘭版《科學怪人》，但主角是被造出來的女人，而且她一點也不打算照別人的劇本活。<b>後現代、假文件、註腳、插圖全上</b>，書比電影更狂。
+        <span class="pf">1992 年出版，獲 Whitbread Award 與衛報小說獎。2023 年 Yorgos Lanthimos 改編電影《可憐的東西》，艾瑪‧史東以此片獲奧斯卡最佳女主角。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 2. 歐陸與日本 ================= -->
+<section>
+  <div class="sec-head"><h2>歐陸．日本．華文<em>5 本 · 定價 2,420 → 750</em></h2></div>
+  <p class="sec-note">從龔固爾獎到本屋大賞到華文散文——這五本的共同點是「在自己的語言市場裡已經成為現象」。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a9">
+      <div class="gutter"><span class="idx">09</span><input type="checkbox" aria-label="已選 天上再見"></div>
+      <div class="top"><h3 class="ttl">天上再見</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div>
+        <p class="meta"><span>皮耶‧勒梅特</span><span>時報文化</span><span>9789571364940</span></p>
+        <p class="badges"><span class="bg">2013 龔固爾獎</span><span class="bg t">法國凱薩獎最佳改編</span></p>
+        <p class="why">一次大戰結束前兩天，兩個倒楣士兵活下來了，然後決定對這個容不下他們的社會做一場超大規模的騙局。<b>格局大、節奏快、憤怒又好笑</b>。
+        <span class="pf">2013 年龔固爾獎（法國最高文學獎）得主，是「災難之子」三部曲首部；2017 年改編電影，2018 年獲法國凱薩獎最佳改編劇本。清單裡另有續作與新作《大世界》，見遺珠名單。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a10">
+      <div class="gutter"><span class="idx">10</span><input type="checkbox" aria-label="已選 告白"></div>
+      <div class="top"><h3 class="ttl">告白（十五週年紀念新版）</h3><p class="pr"><s>350</s> → <b>150</b> <span class="sv">省 200</span></p></div>
+      <div>
+        <p class="meta"><span>湊佳苗</span><span>時報文化</span><span>9786263537026</span></p>
+        <p class="badges"><span class="bg">本屋大賞第一名</span><span class="bg">週刊文春推理 BEST10 第一名</span><span class="bg t">銷量逾 280 萬冊</span></p>
+        <p class="why">女老師在結業式上對全班宣布：我四歲的女兒不是意外溺死，殺她的兩個人在這間教室裡。<b>六段獨白，六次翻轉</b>，是日系推理裡最常被推薦的入門經典。
+        <span class="pf">湊佳苗的出道作，同時拿下週刊文春「推理 BEST10」第一名與第 6 屆本屋大賞第一名（本屋大賞由日本書店店員投票選出）；累計銷量逾 280 萬冊，日本《Da Vinci》雜誌因此稱她「嫌惡系推理女王」。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a11">
+      <div class="gutter"><span class="idx">11</span><input type="checkbox" aria-label="已選 城與不確定的牆"></div>
+      <div class="top"><h3 class="ttl">城與不確定的牆（平裝）</h3><p class="pr"><s>680</s> → <b>150</b> <span class="sv">省 530</span></p></div>
+      <div>
+        <p class="meta"><span>村上春樹</span><span>時報文化</span><span>9786263969124</span></p>
+        <p class="badges"><span class="bg t">村上最新長篇</span><span class="bg t">折扣前段班</span></p>
+        <p class="why">村上隔了六年的長篇，把 1980 年代寫過、後來自己不滿意的中篇重新寫成完整的小說：一座有牆的城、一座圖書館、讀夢的人。<b>定價 680 用 150 帶走，是這份清單裡最有份量的小說級 CP 值</b>。
+        <span class="pf">整份特價書單中村上春樹作品超過 60 種（含《1Q84》《刺殺騎士團長》《世界末日與冷酷異境》兩種書封版本、隨筆與訪談集），是清單裡收錄最完整的單一作者——如果你本來就是讀者，這次可以一次補齊。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a12">
+      <div class="gutter"><span class="idx">12</span><input type="checkbox" aria-label="已選 目送"></div>
+      <div class="top"><h3 class="ttl">目送（新裝珍藏版）</h3><p class="pr"><s>520</s> → <b>150</b> <span class="sv">省 370</span></p></div>
+      <div>
+        <p class="meta"><span>龍應台</span><span>時報文化</span><span>9786263354050</span></p>
+        <p class="badges"><span class="bg t">華文世界流傳最廣</span><span class="bg t">超級暢銷經典</span></p>
+        <p class="why">七十四篇散文，寫父親的逝、母親的老、兒子的離。<b>如果你正在同時照顧上一代和養下一代，這本書的位置很難被取代。</b>
+        <span class="pf">緊接《孩子你慢慢來》、《親愛的安德烈》之後的作品，出版方以「華人世界流傳最廣的文字」定位；三本合稱「人生三書」，加上《天長地久》為「人生四書」——這四本在本次特價書單中全部都有。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a13">
+      <div class="gutter"><span class="idx">13</span><input type="checkbox" aria-label="已選 琥珀眼睛的兔子"></div>
+      <div class="top"><h3 class="ttl">琥珀眼睛的兔子（二版）</h3><p class="pr"><s>420</s> → <b>150</b> <span class="sv">省 270</span></p></div>
+      <div>
+        <p class="meta"><span>艾德蒙‧德瓦爾</span><span>木馬文化</span><span>9789863597582</span></p>
+        <p class="badges"><span class="bg">Costa 傳記獎</span><span class="bg">Galaxy 年度新人獎</span><span class="bg t">譯成 29 種語言</span></p>
+        <p class="why">陶藝家繼承了 264 個日本根付小雕件，於是回頭追這批東西怎麼在納粹抄家、家族流散之後活下來。<b>非虛構，但讀起來比多數小說好看</b>——歐洲猶太銀行世家一百年的興亡藏在幾個掌心大的木雕裡。
+        <span class="pf">獲 Costa Book Award 傳記類首獎與 Galaxy 國家圖書獎年度新人獎，《紐約時報》暢銷書，已譯成 29 種語言；紐約猶太博物館曾以本書為主題策展。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 3. 世界文學經典 ================= -->
+<section>
+  <div class="sec-head"><h2>經典：值得放在書架上的版本<em>3 本 · 定價 1,300 → 450</em></h2></div>
+  <p class="sec-note">經典到處都買得到，所以這裡只挑「版本有加值」的：精裝、名家譯本、或紀念新譯。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a14">
+      <div class="gutter"><span class="idx">14</span><input type="checkbox" aria-label="已選 一九八四"></div>
+      <div class="top"><h3 class="ttl">一九八四（精裝版）</h3><p class="pr"><s>360</s> → <b>150</b> <span class="sv">省 210</span></p></div>
+      <div>
+        <p class="meta"><span>喬治‧歐威爾</span><span>時報文化</span><span>9789571382302</span></p>
+        <p class="badges"><span class="bg t">二十世紀最重要小說之一</span><span class="bg t">精裝</span></p>
+        <p class="why">不需要介紹。挑這一筆的理由是<b>精裝版 150 元</b>——這是那種會被翻很多次、也會被借走的書，硬殼比較划算。
+        <span class="pf">特價書單裡「反烏托邦三部曲」全新譯本精裝珍藏版三本都有：《一九八四》330、《美麗新世界》370、《我們》370，全部特價 150。想一次收齊的話三本 450 元。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a15">
+      <div class="gutter"><span class="idx">15</span><input type="checkbox" aria-label="已選 如果在冬夜，一個旅人"></div>
+      <div class="top"><h3 class="ttl">如果在冬夜，一個旅人</h3><p class="pr"><s>360</s> → <b>150</b> <span class="sv">省 210</span></p></div>
+      <div>
+        <p class="meta"><span>伊塔羅‧卡爾維諾</span><span>時報文化</span><span>9789571380322</span></p>
+        <p class="badges"><span class="bg t">後現代小說代表作</span></p>
+        <p class="why">一本關於「你正在讀一本書」的小說，開了十個頭、沒有一個講完。<b>如果你覺得小說最近都長得差不多，這本會把你打醒。</b>
+        <span class="pf">整份書單收錄卡爾維諾作品 15 種以上，包含《看不見的城市》《樹上的男爵》《分成兩半的子爵》《不存在的騎士》《給下一輪太平盛世的備忘錄》《為什麼讀經典》《巴黎隱士》——這是台灣書市少見的一次性齊備，愛卡爾維諾的話這是主要理由之一。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a16">
+      <div class="gutter"><span class="idx">16</span><input type="checkbox" aria-label="已選 聲音與憤怒"></div>
+      <div class="top"><h3 class="ttl">聲音與憤怒</h3><p class="pr"><s>580</s> → <b>150</b> <span class="sv">省 430</span></p></div>
+      <div>
+        <p class="meta"><span>威廉‧福克納</span><span>雙囍</span><span>9786269722105</span></p>
+        <p class="badges"><span class="bg">諾貝爾文學獎得主代表作</span><span class="bg t">省 430</span></p>
+        <p class="why">四段敘事、四種意識，第一段甚至由一位智能障礙者的感官寫成。<b>公認難讀，但也是二十世紀小說技術的分水嶺</b>。580 元的書 150 元帶走，值得放進「今年要挑戰一本」的位置。
+        <span class="pf">福克納 1949 年獲諾貝爾文學獎；《聲音與憤怒》（The Sound and the Fury, 1929）與《我彌留之際》並列其代表作，長年列入各種二十世紀百大小說名單。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 4. 人文科普 ================= -->
+<section>
+  <div class="sec-head"><h2>人文與科普：折扣最深的一區<em>6 本 · 定價 4,120 → 900</em></h2></div>
+  <p class="sec-note">大部頭非虛構的定價本來就高，所以這一區的省下金額最誇張——六本平均省 537 元。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a17">
+      <div class="gutter"><span class="idx">17</span><input type="checkbox" aria-label="已選 基因"></div>
+      <div class="top"><h3 class="ttl">基因：人類最親密的歷史</h3><p class="pr"><s>680</s> → <b>150</b> <span class="sv">省 530</span></p></div>
+      <div>
+        <p class="meta"><span>辛達塔‧穆克吉</span><span>時報文化</span><span>9789571374765</span></p>
+        <p class="badges"><span class="bg">普立茲獎得主著作</span><span class="bg">皇家學會科學圖書獎入圍</span><span class="bg t">NYT 第一名暢銷</span></p>
+        <p class="why">從孟德爾的豌豆一路寫到基因編輯，中間穿進作者自己家族的精神疾病史。<b>它把「遺傳」寫成一個關於身分與選擇的問題，而不是生物課</b>。
+        <span class="pf">《紐約時報》第一名暢銷書、NYT 2016 年百大好書；入圍 Wellcome Trust Prize 與皇家學會科學圖書獎。作者以《萬病之王》獲 2011 年普立茲非虛構獎，並於 2019 年獲 Lewis Thomas Prize；本書已由 Ken Burns 改編為 PBS 紀錄片。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a18">
+      <div class="gutter"><span class="idx">18</span><input type="checkbox" aria-label="已選 瘟疫與文明"></div>
+      <div class="top"><h3 class="ttl">瘟疫與文明：人類疾病大歷史</h3><p class="pr"><s>880</s> → <b>150</b> <span class="sv">省 730</span></p></div>
+      <div>
+        <p class="meta"><span>凱爾‧哈珀</span><span>時報文化</span><span>9786263742048</span></p>
+        <p class="badges"><span class="bg t">全清單第二深折扣</span><span class="bg t">省 730</span></p>
+        <p class="why">整份書單定價最高的非虛構之一。<b>把人類史重寫成一部「跟病原體共同演化」的歷史</b>——農業、城市、殖民、全球化，每一次讓文明變強的事，同時都讓瘟疫變強。
+        <span class="pf">作者為奧克拉荷馬大學古典學與文學教授，另著有《羅馬的命運》（The Fate of Rome），是近年「氣候與疾病如何改寫歷史」這一波研究中被引用最多的作者之一。以定價 880 換 150 計算，折數約 1.7 折。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a19">
+      <div class="gutter"><span class="idx">19</span><input type="checkbox" aria-label="已選 野火"></div>
+      <div class="top"><h3 class="ttl">野火：揭開氣候災難的序幕</h3><p class="pr"><s>720</s> → <b>150</b> <span class="sv">省 570</span></p></div>
+      <div>
+        <p class="meta"><span>約翰‧維揚</span><span>時報文化</span><span>9786264443388</span></p>
+        <p class="badges"><span class="bg">2023 Baillie Gifford 非虛構獎</span></p>
+        <p class="why">2016 年加拿大亞伯達省麥克莫瑞堡的大火，燒的正是全球最大油砂產區所在的城市。<b>石油工業與氣候科學在同一個場景裡對撞</b>，寫得像災難現場報導又像論證。
+        <span class="pf">2023 年 Baillie Gifford 非虛構獎首獎（英國最重要的非虛構書獎，獎金 5 萬英鎊），2023 年 11 月於倫敦科學博物館揭曉。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a20">
+      <div class="gutter"><span class="idx">20</span><input type="checkbox" aria-label="已選 核戰末日"></div>
+      <div class="top"><h3 class="ttl">核戰末日：我們與世界毀滅的距離</h3><p class="pr"><s>560</s> → <b>150</b> <span class="sv">省 410</span></p></div>
+      <div>
+        <p class="meta"><span>安妮‧雅各布森</span><span>時報文化</span><span>9786263967755</span></p>
+        <p class="badges"><span class="bg">普立茲獎入圍作者</span><span class="bg t">NYT 暢銷</span><span class="bg t">維勒納夫執導改編中</span></p>
+        <p class="why">以分鐘為單位模擬一枚核彈落在五角大廈之後的 72 分鐘。<b>資料全部來自解密文件與內部訪談，但讀起來像驚悚小說</b>——這是近年最讓人睡不著的非虛構。
+        <span class="pf">作者為普立茲獎入圍記者；2024 年出版即登《紐約時報》暢銷榜。Legendary 已取得改編權，《沙丘》導演 Denis Villeneuve 執導，目標 2027 年上映——這是「電影上映前先讀原著」的典型標的。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a21">
+      <div class="gutter"><span class="idx">21</span><input type="checkbox" aria-label="已選 從苦力貿易到排華"></div>
+      <div class="top"><h3 class="ttl">從苦力貿易到排華</h3><p class="pr"><s>680</s> → <b>150</b> <span class="sv">省 530</span></p></div>
+      <div>
+        <p class="meta"><span>艾明如</span><span>時報文化</span><span>9786263534988</span></p>
+        <p class="badges"><span class="bg">2022 Bancroft Prize</span><span class="bg">Cundill History Prize 入圍</span></p>
+        <p class="why">十九世紀加州、澳洲、南非三地淘金熱裡的華人移工，如何被同一套「中國人問題」的語言排除。<b>它解釋的其實是現代種族觀念怎麼被製造出來的</b>——對台灣讀者來說也是自己的僑史。
+        <span class="pf">獲 2022 年 Bancroft Prize（美國史學界最高榮譽之一），是首部獲此獎的亞美史著作；並入圍 2022 年 Cundill History Prize 與洛杉磯時報圖書獎決選。作者為哥倫比亞大學歷史學與亞美研究教授，研究跨五大洲檔案。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a22">
+      <div class="gutter"><span class="idx">22</span><input type="checkbox" aria-label="已選 人慈"></div>
+      <div class="top"><h3 class="ttl">人慈：橫跨二十萬年的人性旅程</h3><p class="pr"><s>600</s> → <b>150</b> <span class="sv">省 450</span></p></div>
+      <div>
+        <p class="meta"><span>羅格‧布雷格曼</span><span>時報文化</span><span>4711441074111</span></p>
+        <p class="badges"><span class="bg">安德魯卡內基獎章提名</span><span class="bg t">版權售出 46 國</span><span class="bg t">限量金句透卡組</span></p>
+        <p class="why">用實際的史料和重做的實驗，去拆「人性本惡」的那些經典案例（史丹佛監獄實驗、真實版蒼蠅王）。<b>你不一定要同意他，但這是一本會讓你想反駁、然後去查資料的書</b>——這正是好的非虛構該有的效果。
+        <span class="pf">《華盛頓郵報》年度 50 大非虛構好書、2021 年安德魯卡內基獎章提名；版權售出 46 國、上市首週即為暢銷書。作者前作《改變每個人的 3 個狂熱夢想》曾登《週日泰晤士報》與《紐約時報》暢銷榜、譯成 32 種語言。書評界也有「論證過度簡化」的質疑——建議搭配同作者《抱負》（500→150）一起讀。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 5. 心理與思想 ================= -->
+<section>
+  <div class="sec-head"><h2>心理與思想：不會過期的四本<em>4 本 · 定價 1,840 → 600</em></h2></div>
+  <p class="sec-note">這一區刻意避開所有「內耗」「療癒」「不焦慮」的新書——留下的都是被引用了幾十年、或作者有諾貝爾／普立茲級背書的。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a23">
+      <div class="gutter"><span class="idx">23</span><input type="checkbox" aria-label="已選 死亡否認"></div>
+      <div class="top"><h3 class="ttl">死亡否認</h3><p class="pr"><s>520</s> → <b>150</b> <span class="sv">省 370</span></p></div>
+      <div>
+        <p class="meta"><span>歐內斯特‧貝克爾</span><span>大家出版</span><span>9789579542814</span></p>
+        <p class="badges"><span class="bg">1974 普立茲非虛構獎</span></p>
+        <p class="why">核心主張很簡單也很難擺脫：<b>人類幾乎所有的作為，都是為了迴避「自己會死」這件事</b>——包括英雄崇拜、宗教、名聲、事業。當代「恐懼管理理論」整條研究線的源頭。
+        <span class="pf">1973 年出版，1974 年獲普立茲一般非虛構獎，而作者已在該年三月辭世，屬追贈。貝克爾為文化人類學家，此書至今仍是死亡心理學的必讀書目。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a24">
+      <div class="gutter"><span class="idx">24</span><input type="checkbox" aria-label="已選 無序之美"></div>
+      <div class="top"><h3 class="ttl">無序之美：與椋鳥齊飛</h3><p class="pr"><s>420</s> → <b>150</b> <span class="sv">省 270</span></p></div>
+      <div>
+        <p class="meta"><span>喬治‧帕里西</span><span>野人文化</span><span>9786267428597</span></p>
+        <p class="badges"><span class="bg">2021 諾貝爾物理獎得主</span></p>
+        <p class="why">從一群椋鳥為什麼能同步轉向，講到複雜系統為什麼可以被物理學處理。<b>薄，而且是諾貝爾獎得主自己親筆的科普</b>——他真的用三維攝影去拍鳥群，然後發現鳥不是看絕對距離，是看相對比例。
+        <span class="pf">帕里西為羅馬大學理論物理教授，與 Klaus Hasselmann、真鍋淑郎共同獲得 2021 年諾貝爾物理學獎，得獎理由即為複雜系統理論的貢獻。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a25">
+      <div class="gutter"><span class="idx">25</span><input type="checkbox" aria-label="已選 推力"></div>
+      <div class="top"><h3 class="ttl">推力（時報五十‧金句透卡組限量版）</h3><p class="pr"><s>500</s> → <b>150</b> <span class="sv">省 350</span></p></div>
+      <div>
+        <p class="meta"><span>理查‧塞勒、凱斯‧桑思坦</span><span>時報文化</span><span>4711441072872</span></p>
+        <p class="badges"><span class="bg">諾貝爾經濟學獎得主</span><span class="bg t">行為經濟學奠基之作</span></p>
+        <p class="why">行為經濟學最有影響力的一本應用書：<b>不禁止、不說教，只改預設值</b>。讀完會開始注意到生活裡到處都是別人幫你設好的預設選項。
+        <span class="pf">共同作者理查‧塞勒獲 2017 年諾貝爾經濟學獎；本書概念被英國、美國等多國政府設立「行為洞察小組」實際採用。本次為時報五十週年限量金句透卡組版本。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a26">
+      <div class="gutter"><span class="idx">26</span><input type="checkbox" aria-label="已選 愛的藝術"></div>
+      <div class="top"><h3 class="ttl">愛的藝術（世紀新譯本）</h3><p class="pr"><s>400</s> → <b>150</b> <span class="sv">省 250</span></p></div>
+      <div>
+        <p class="meta"><span>埃里希‧佛洛姆</span><span>木馬文化</span><span>9789863599821</span></p>
+        <p class="badges"><span class="bg t">心理學不朽經典</span><span class="bg t">全新譯本</span></p>
+        <p class="why">1956 年的書，主張愛不是一種「遇到」的運氣，是一種需要練習的能力。<b>薄薄一本，但它把「我找不到對的人」這句話徹底翻了個面。</b>
+        <span class="pf">佛洛姆為法蘭克福學派社會心理學家，《愛的藝術》是史上最暢銷的心理學著作之一，全球持續再版逾七十年。清單中另有同書「給你勇氣版」（400→150），內容相同、封面不同。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 6. 工作與商業 ================= -->
+<section>
+  <div class="sec-head"><h2>工作與生活的實用書<em>4 本 · 定價 2,080 → 600</em></h2></div>
+  <p class="sec-note">商業類最容易買到過期的書，所以這裡只留：作者有實質學術背景、或內容本身不會被下一波趨勢作廢的。</p>
+  <ol class="list">
+
+    <li class="bk" data-id="a27">
+      <div class="gutter"><span class="idx">27</span><input type="checkbox" aria-label="已選 財報就像一本故事書"></div>
+      <div class="top"><h3 class="ttl">財報就像一本故事書【20週年增訂版】</h3><p class="pr"><s>500</s> → <b>150</b> <span class="sv">省 350</span></p></div>
+      <div>
+        <p class="meta"><span>劉順仁</span><span>時報文化</span><span>9786264198493</span></p>
+        <p class="badges"><span class="bg t">暢銷 20 年不墜</span><span class="bg t">台大會計系主任</span></p>
+        <p class="why">台灣財報入門書的預設答案。<b>20 週年版大幅改寫，加入 AI 與 ESG，並收錄台大會計系與台積電合作的專章</b>——講台積電如何用財報向法人說故事。
+        <span class="pf">作者劉順仁為台大管理學院會計學系主任、美國匹茲堡大學會計學博士，曾任教馬里蘭大學商學院並獲該院傑出教學獎。本書自初版起持續增訂逾二十年，是博客來、金石堂長銷品。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a28">
+      <div class="gutter"><span class="idx">28</span><input type="checkbox" aria-label="已選 慢速工作力"></div>
+      <div class="top"><h3 class="ttl">慢速工作力</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div>
+        <p class="meta"><span>卡爾‧紐波特</span><span>時報文化</span><span>9786263969155</span></p>
+        <p class="badges"><span class="bg">Economist 2024 年度好書</span><span class="bg">NPR 2024 年度好書</span><span class="bg t">NYT 暢銷</span></p>
+        <p class="why">三個原則：做更少的事、用自然的速度工作、對品質偏執。<b>《深度工作力》作者對「偽生產力」的正面攻擊</b>——如果你正處於同時被工作和家庭切碎的階段，這本比任何時間管理術有用。
+        <span class="pf">《經濟學人》與 NPR 2024 年度好書、SABEW 年度最佳商業書、《環球郵報》年度商業書；並登《紐約時報》《華盛頓郵報》《今日美國》暢銷榜。《Nature》評為「對現代職場表演式忙碌的一次起義」。作者為喬治城大學資訊工程教授。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a29">
+      <div class="gutter"><span class="idx">29</span><input type="checkbox" aria-label="已選 食物與廚藝1"></div>
+      <div class="top"><h3 class="ttl">食物與廚藝 1：奶．蛋．肉．魚（二版）</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div>
+        <p class="meta"><span>哈洛德‧馬基</span><span>大家出版</span><span>9786267561294</span></p>
+        <p class="badges"><span class="bg">IACP／詹姆斯比爾德基金會最佳飲食參考書</span></p>
+        <p class="why">不是食譜，是「為什麼」——為什麼肉要靜置、為什麼蛋白會泡沫化、為什麼魚一過火就散。<b>買了它，之後所有食譜你都會讀懂一層</b>。
+        <span class="pf">2004 年修訂版獲 IACP 與詹姆斯比爾德基金會共同評選為最佳飲食參考書；《TIME》在 1984 年初版時即稱之為「小型經典」。Heston Blumenthal、David Chang、Alton Brown 等主廚公開推崇，多所大學食品科學課程採用。三冊在本次清單中都有，見遺珠名單。</span></p>
+      </div>
+    </li>
+
+    <li class="bk" data-id="a30">
+      <div class="gutter"><span class="idx">30</span><input type="checkbox" aria-label="已選 雲端咕咕國"></div>
+      <div class="top"><h3 class="ttl">雲端咕咕國</h3><p class="pr"><s>680</s> → <b>150</b> <span class="sv">省 530</span></p></div>
+      <div>
+        <p class="meta"><span>安東尼‧杜爾</span><span>時報文化</span><span>9786263969117</span></p>
+        <p class="badges"><span class="bg">美國國家圖書獎決選</span><span class="bg t">省 530</span></p>
+        <p class="why">《呼喚奇蹟的光》之後的長篇：一份殘缺的古希臘手稿，串起十五世紀的君士坦丁堡、當代美國小鎮圖書館、以及一艘駛向系外行星的太空船。<b>五條線、三個時代，最後扣在「有人把故事抄下來了」這件事上。</b>
+        <span class="pf">2021 年美國國家圖書獎小說類決選入圍作品，《紐約時報》暢銷書。與第 1 筆《呼喚奇蹟的光》同作者——兩本一起 300 元。</span></p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= 遺珠 20 ================= -->
+<section>
+  <div class="sec-head"><h2>遺珠 20 本<em>定價 9,800 → 3,000 · 省 6,800</em></h2></div>
+  <p class="sec-note">這 20 本任何一本都可以擠進上面的名單，之所以放這裡多半是因為：同作者已經選過、屬於套書的其他冊、或者門檻略高。折扣深度上其實這一組更兇——前四本每本省 570 到 650 元。</p>
+  <ol class="list">
+
+    <li class="bk mini" data-id="b1">
+      <div class="gutter"><span class="idx">31</span><input type="checkbox" aria-label="已選 紅與黑"></div>
+      <div class="top"><h3 class="ttl">紅與黑（精裝版）</h3><p class="pr"><s>800</s> → <b>150</b> <span class="sv">省 650</span></p></div>
+      <div><p class="meta"><span>斯湯達爾</span><span>時報文化</span><span>9786263742970</span></p>
+      <p class="why">整份書單省最多的兩本之一。十九世紀法國寫實主義的起點，也是「野心與階級」這個題目最早的完整版本。精裝，800 元換 150。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b2">
+      <div class="gutter"><span class="idx">32</span><input type="checkbox" aria-label="已選 遠大前程"></div>
+      <div class="top"><h3 class="ttl">遠大前程（精裝版）</h3><p class="pr"><s>800</s> → <b>150</b> <span class="sv">省 650</span></p></div>
+      <div><p class="meta"><span>查爾斯‧狄更斯</span><span>時報文化</span><span>9786263536111</span></p>
+      <p class="why">另一本省 650。狄更斯最成熟的長篇，也是他自己最滿意的作品之一；書單裡另有《雙城記》（480→150）。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b3">
+      <div class="gutter"><span class="idx">33</span><input type="checkbox" aria-label="已選 大世界"></div>
+      <div class="top"><h3 class="ttl">大世界</h3><p class="pr"><s>780</s> → <b>150</b> <span class="sv">省 630</span></p></div>
+      <div><p class="meta"><span>皮耶‧勒梅特</span><span>時報文化</span><span>9786264193542</span></p>
+      <p class="why">龔固爾獎得主的新系列首部（「光榮三十年」四部曲），1948 年的貝魯特與巴黎。如果《天上再見》讀得順，這本是下一站。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b4">
+      <div class="gutter"><span class="idx">34</span><input type="checkbox" aria-label="已選 十二凱撒"></div>
+      <div class="top"><h3 class="ttl">十二凱撒：從古代世界到現代的權力形象</h3><p class="pr"><s>720</s> → <b>150</b> <span class="sv">省 570</span></p></div>
+      <div><p class="meta"><span>瑪莉‧畢爾德</span><span>時報文化</span><span>9786263742666</span></p>
+      <p class="why">劍橋古典學者、《SPQR》作者。談的不是十二個皇帝，是兩千年來的人如何用他們的臉來擺弄自己的權力。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b5">
+      <div class="gutter"><span class="idx">35</span><input type="checkbox" aria-label="已選 十年一覺電影夢"></div>
+      <div class="top"><h3 class="ttl">十年一覺電影夢：李安傳（經典新版）</h3><p class="pr"><s>680</s> → <b>150</b> <span class="sv">省 530</span></p></div>
+      <div><p class="meta"><span>張靚蓓</span><span>時報文化</span><span>9786264199810</span></p>
+      <p class="why">李安唯一的自傳。從《推手》到《臥虎藏龍》，李安破例接受三次長訪、作者甚至跟他生活三天。中央社「每週好書讀」選書。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b6">
+      <div class="gutter"><span class="idx">36</span><input type="checkbox" aria-label="已選 夢的解析"></div>
+      <div class="top"><h3 class="ttl">夢的解析（三版‧新版）</h3><p class="pr"><s>520</s> → <b>150</b> <span class="sv">省 370</span></p></div>
+      <div><p class="meta"><span>西格蒙德‧佛洛伊德</span><span>左岸文化</span><span>9789865727888</span></p>
+      <p class="why">精神分析的奠基之作。你可以不同意其中任何一頁，但二十世紀的文學、電影、廣告全部建立在它的詞彙上。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b7">
+      <div class="gutter"><span class="idx">37</span><input type="checkbox" aria-label="已選 巴菲特寫給股東的信"></div>
+      <div class="top"><h3 class="ttl">巴菲特寫給股東的信〔2023全新增修版〕</h3><p class="pr"><s>520</s> → <b>150</b> <span class="sv">省 370</span></p></div>
+      <div><p class="meta"><span>華倫‧巴菲特、勞倫斯‧康寧漢</span><span>時報文化</span><span>9786263743816</span></p>
+      <p class="why">不是投資技巧書，是把數十年股東信按主題重編的原始文本。市面上關於巴菲特的書有幾百本，這是唯一由他自己寫的那一本。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b8">
+      <div class="gutter"><span class="idx">38</span><input type="checkbox" aria-label="已選 美麗的世界，你在哪裡"></div>
+      <div class="top"><h3 class="ttl">美麗的世界，你在哪裡</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div><p class="meta"><span>莎莉‧魯尼</span><span>時報文化</span><span>9786263358003</span></p>
+      <p class="why">魯尼第三本長篇，四個三十歲上下的人用 email 互相講理論、然後把生活搞得一團亂。喜歡《正常人》的話直接續。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b9">
+      <div class="gutter"><span class="idx">39</span><input type="checkbox" aria-label="已選 飲月少女"></div>
+      <div class="top"><h3 class="ttl">飲月少女</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div><p class="meta"><span>凱莉‧龐希爾</span><span>野人文化</span><span>9786267555309</span></p>
+      <p class="why">紐伯瑞金獎（美國兒童文學最高榮譽）、Booklist 年度最佳。標為童書但成人讀來完全不減——可以先自己讀，十年後再交給孩子。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b10">
+      <div class="gutter"><span class="idx">40</span><input type="checkbox" aria-label="已選 食物與廚藝2"></div>
+      <div class="top"><h3 class="ttl">食物與廚藝 2：蔬．果．香料．穀物（二版）</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div><p class="meta"><span>哈洛德‧馬基</span><span>大家出版</span><span>9786267561300</span></p>
+      <p class="why">套書第二冊。三冊 450 元收齊這套料理科學聖經，是這份清單裡最實際的一筆。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b11">
+      <div class="gutter"><span class="idx">41</span><input type="checkbox" aria-label="已選 食物與廚藝3"></div>
+      <div class="top"><h3 class="ttl">食物與廚藝 3：麵食．醬料．甜點．飲料（二版）</h3><p class="pr"><s>450</s> → <b>150</b> <span class="sv">省 300</span></p></div>
+      <div><p class="meta"><span>哈洛德‧馬基</span><span>大家出版</span><span>9786267561317</span></p>
+      <p class="why">套書第三冊，含發酵、烘焙、咖啡與酒。跟第 1、2 冊一起買才有意義。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b12">
+      <div class="gutter"><span class="idx">42</span><input type="checkbox" aria-label="已選 群的征服"></div>
+      <div class="top"><h3 class="ttl">群的征服</h3><p class="pr"><s>400</s> → <b>150</b> <span class="sv">省 250</span></p></div>
+      <div><p class="meta"><span>愛德華‧威爾森</span><span>左岸文化</span><span>9789865727758</span></p>
+      <p class="why">兩度普立茲獎得主、社會生物學創建者的晚期總結：人為什麼會演化出「群體」這件事。與《人慈》互為對照組，一起讀最好。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b13">
+      <div class="gutter"><span class="idx">43</span><input type="checkbox" aria-label="已選 聖母峰之死"></div>
+      <div class="top"><h3 class="ttl">聖母峰之死（二版）</h3><p class="pr"><s>400</s> → <b>150</b> <span class="sv">省 250</span></p></div>
+      <div><p class="meta"><span>強‧克拉庫爾</span><span>大家出版</span><span>9786267561362</span></p>
+      <p class="why">1996 年聖母峰山難的第一手記述，作者本人在場。報導文學的教科書級案例，也是「商業登山」爭議的起點。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b14">
+      <div class="gutter"><span class="idx">44</span><input type="checkbox" aria-label="已選 守門員的焦慮"></div>
+      <div class="top"><h3 class="ttl">守門員的焦慮</h3><p class="pr"><s>380</s> → <b>150</b> <span class="sv">省 230</span></p></div>
+      <div><p class="meta"><span>彼得‧漢德克</span><span>木馬文化</span><span>9789863598268</span></p>
+      <p class="why">2019 年諾貝爾文學獎得主的處女作。前守門員布洛赫失業後，焦慮一路失控。門檻偏高，但薄——想試諾獎作家可以從這本開始。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b15">
+      <div class="gutter"><span class="idx">45</span><input type="checkbox" aria-label="已選 身為職業小說家"></div>
+      <div class="top"><h3 class="ttl">身為職業小說家</h3><p class="pr"><s>380</s> → <b>150</b> <span class="sv">省 230</span></p></div>
+      <div><p class="meta"><span>村上春樹</span><span>時報文化</span><span>9789571365091</span></p>
+      <p class="why">村上談自己怎麼寫、怎麼撐、怎麼看文學獎。不管你寫不寫東西，這是一本關於「長期做一件事」的好書。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b16">
+      <div class="gutter"><span class="idx">46</span><input type="checkbox" aria-label="已選 此生，你我皆短暫燦爛"></div>
+      <div class="top"><h3 class="ttl">此生，你我皆短暫燦爛</h3><p class="pr"><s>360</s> → <b>150</b> <span class="sv">省 210</span></p></div>
+      <div><p class="meta"><span>王鷗行</span><span>時報文化</span><span>9789571386508</span></p>
+      <p class="why">越裔美國詩人 Ocean Vuong 的自傳性小說，寫給不識字的母親。麥克阿瑟獎得主，語言密度接近詩。清單裡另有他的詩集《時間是母親》（400→150）。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b17">
+      <div class="gutter"><span class="idx">47</span><input type="checkbox" aria-label="已選 看不見的城市"></div>
+      <div class="top"><h3 class="ttl">看不見的城市（二十週年紀念新版）</h3><p class="pr"><s>360</s> → <b>150</b> <span class="sv">省 210</span></p></div>
+      <div><p class="meta"><span>伊塔羅‧卡爾維諾</span><span>時報文化</span><span>9786263746473</span></p>
+      <p class="why">馬可波羅向忽必烈描述五十五座城。可以隨手翻開任一頁讀兩分鐘——最適合放床頭的一本。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b18">
+      <div class="gutter"><span class="idx">48</span><input type="checkbox" aria-label="已選 給下一輪太平盛世的備忘錄"></div>
+      <div class="top"><h3 class="ttl">給下一輪太平盛世的備忘錄</h3><p class="pr"><s>350</s> → <b>150</b> <span class="sv">省 200</span></p></div>
+      <div><p class="meta"><span>伊塔羅‧卡爾維諾</span><span>時報文化</span><span>9786263743724</span></p>
+      <p class="why">卡爾維諾為哈佛諾頓講座準備、卻未及發表的六講（實際完成五講）：輕、快、準、顯、繁。談文學，也在談怎麼思考。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b19">
+      <div class="gutter"><span class="idx">49</span><input type="checkbox" aria-label="已選 異鄉人"></div>
+      <div class="top"><h3 class="ttl">異鄉人（精裝版）</h3><p class="pr"><s>300</s> → <b>150</b> <span class="sv">省 150</span></p></div>
+      <div><p class="meta"><span>阿爾貝‧卡繆</span><span>時報文化</span><span>9789571384641</span></p>
+      <p class="why">諾貝爾文學獎得主最著名的短長篇。清單裡另有卡繆《薛西弗斯的神話》法國七星文庫權威譯本（380→150），兩本一起讀最完整。</p></div>
+    </li>
+
+    <li class="bk mini" data-id="b20">
+      <div class="gutter"><span class="idx">50</span><input type="checkbox" aria-label="已選 關於跑步，我說的其實是"></div>
+      <div class="top"><h3 class="ttl">關於跑步，我說的其實是……</h3><p class="pr"><s>250</s> → <b>150</b> <span class="sv">省 100</span></p></div>
+      <div><p class="meta"><span>村上春樹</span><span>時報文化</span><span>9789571349367</span></p>
+      <p class="why">省最少的一本，但放進來是因為它適合現在：一本關於在忙碌人生裡持續做一件不緊急的事的書。真的很短。</p></div>
+    </li>
+  </ol>
+</section>
+
+<!-- ================= notes ================= -->
+<div class="panel">
+  <h3>幾個判斷上的說明</h3>
+  <ul>
+    <li><b>為什麼沒有《沙丘》？</b>清單裡只有第 2 到第 6 集（350–630 元不等），缺首部曲。缺第一集的系列不適合當推薦起點——但如果你本來就讀過首部曲，這五本一次 750 元收齊，是全清單最超值的系列補完。</li>
+    <li><b>為什麼心理勵志類幾乎全被排除？</b>該類 247 本裡有大量「內耗／療癒／不焦慮」的短生命週期新書，以及養生偏方、命理風水。這一區我只留了有諾貝爾、普立茲級背書或已流傳數十年的四本。</li>
+    <li><b>丹‧布朗全套都在。</b>《達文西密碼》《天使與魔鬼》《地獄》《起源》等 8 本紀念新版，定價 480–680 全部特價 150。純娛樂取向、想一口氣看完一整套的話，這是最直接的選擇。</li>
+    <li><b>經典文學精裝系列有 90 本。</b>從《傲慢與偏見》《大亨小傳》《老人與海》《人間失格》到契訶夫、茨威格、歐‧亨利短篇全集，全部特價 150。如果你想一次補書架，這一區比單本挑更有效率。</li>
+    <li><b>訂購提醒。</b>原始檔案「數量」欄位：時報品項多為 <b>2</b>、其他出版社品項多為 <b>3</b>。若那代表可訂上限，本清單全部在範圍內；若代表庫存，建議把折扣最深的前八本（見頁首圖表）排在最前面下單。</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h3>查證來源</h3>
+  <div class="srcs">
+    <p><a href="https://www.pulitzer.org/winners/anthony-doerr">The Pulitzer Prizes</a>：《呼喚奇蹟的光》2015 年小說獎；《死亡否認》1974 年一般非虛構獎</p>
+    <p><a href="https://thebookerprizes.com/the-booker-library/books/at-night-all-blood-is-black">The Booker Prizes</a>：《夜晚的血都是黑的》2021 國際布克獎；《像這樣的小事》2022 布克獎決選</p>
+    <p><a href="https://www.stylist.co.uk/books/piranesi-womens-prize-susanna-clarke/563467">Women's Prize for Fiction</a>：《皮拉奈奇》2021 首獎</p>
+    <p><a href="https://en.wikipedia.org/wiki/Susanna_Clarke">Susanna Clarke</a>：《英倫魔法師》雨果獎與 BBC 影集</p>
+    <p><a href="https://www.csmonitor.com/Books/chapter-and-verse/2011/0608/Tea-Obreht-wins-the-Orange-Prize-for-The-Tiger-s-Wife">Christian Science Monitor</a>：《老虎的妻子》2011 柑橘獎</p>
+    <p><a href="https://en.wikipedia.org/wiki/Poor_Things">Poor Things</a>：Whitbread Award、衛報小說獎、艾瑪‧史東奧斯卡影后</p>
+    <p><a href="https://fr.wikipedia.org/wiki/Au_revoir_l%C3%A0-haut">Au revoir là-haut</a>：《天上再見》2013 龔固爾獎、2018 凱薩獎最佳改編</p>
+    <p><a href="https://www.thebailliegiffordprize.co.uk/inside-the-covers/news/john-vaillants-fire-weather-a-true-story-from-a-hotter-world-wins-the-baillie-gifford-prize-for-non-fiction-2023">The Baillie Gifford Prize</a>：《野火》2023 非虛構獎</p>
+    <p><a href="https://news.columbia.edu/news/mae-ngai-wins-bancroft-prize-plus-more-institutional-milestones">Columbia News</a>：《從苦力貿易到排華》2022 Bancroft Prize</p>
+    <p><a href="https://www.simonandschuster.com/books/The-Gene/Siddhartha-Mukherjee/9781476733524">Simon &amp; Schuster</a>／<a href="https://royalsociety.org/medals-and-prizes/science-book-prize/books/2016/gene/">Royal Society</a>：《基因》暢銷與獎項紀錄</p>
+    <p><a href="https://www.nobelprize.org/prizes/literature/2019/summary/">NobelPrize.org</a>：漢德克 2019 文學獎；<a href="https://physicsworld.com/a/giorgio-parisi-the-nobel-prize-winner-whose-complex-interests-stretch-from-spin-glasses-to-starlings/">Physics World</a>：帕里西 2021 物理獎</p>
+    <p><a href="https://en.wikipedia.org/wiki/Rutger_Bregman">Rutger Bregman</a>：《人慈》46 國版權、卡內基獎章提名</p>
+    <p><a href="https://deadline.com/2024/04/nuclear-war-movie-denis-villeneuve-legendary-dune-part-two-bestselling-book-1235876114/">Deadline</a>：《核戰末日》Villeneuve 改編案</p>
+    <p><a href="https://www.penguinrandomhouse.com/books/722732/slow-productivity-by-cal-newport/9780593544853/">Penguin Random House</a>：《慢速工作力》2024 年度好書與暢銷紀錄</p>
+    <p><a href="https://en.wikipedia.org/wiki/On_Food_and_Cooking">On Food and Cooking</a>：IACP／James Beard 最佳飲食參考書</p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hare_with_Amber_Eyes">The Hare with Amber Eyes</a>：Costa 傳記獎、29 種語言</p>
+    <p><a href="https://www.audible.com/blog/summary-normal-people-by-sally-rooney">Audible</a>／<a href="https://www.nme.com/reviews/normal-people-review-sally-rooney-2651624">NME</a>：《正常人》Costa 獎、布克長名單、影集艾美提名</p>
+    <p><a href="https://www.kobo.com/zh/blog/bookreview_230419_minatokanae">Kobo 書評</a>：《告白》本屋大賞、週刊文春第一名、280 萬冊</p>
+    <p><a href="https://www.books.com.tw/products/0011035495">博客來</a>：《財報就像一本故事書》20 週年版、《目送》及各書書籍頁</p>
+    <p><a href="https://www.cna.com.tw/proj_goodbook/literature/4335">中央社「每週好書讀」</a>：《十年一覺電影夢》《守門員的焦慮》選書</p>
+  </div>
+</div>
+
+<footer class="foot">
+  資料來源：使用者提供之出版社特價書單（1,792 筆，成人類 1,264 筆）· 書名、ISBN、定價與特價皆已逐筆比對原始檔案 · 獎項與暢銷紀錄查證於 2026 年 9 月
+</footer>
+</div>
+
+<script>
+(function(){
+  var KEY = "adultlist50.checked";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+
+  document.querySelectorAll("li.bk").forEach(function(li){
+    var box = li.querySelector("input[type=checkbox]");
+    var id = li.getAttribute("data-id");
+    if (!box || !id) return;
+    if (state[id]) { box.checked = true; li.classList.add("done"); }
+    box.addEventListener("change", function(){
+      li.classList.toggle("done", box.checked);
+      state[id] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>

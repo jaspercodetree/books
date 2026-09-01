@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="為有 3 歲與新生兒的家庭挑選的 30 本特價書，附社群證明與查證來源。">
+<meta property="og:title" content="雙寶書單三十選">
+<meta property="og:description" content="為有 3 歲與新生兒的家庭挑選的 30 本特價書，附社群證明與查證來源。">
+<meta property="og:type" content="article">
+<title>雙寶書單三十選</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root{
+    --paper:#F6F7F4;
+    --card:#FFFFFF;
+    --ink:#16211F;
+    --ink-2:#4A5A56;
+    --ink-3:#7C8B87;
+    --rule:#DDE4E0;
+    --rule-soft:#EAEFEB;
+    --cobalt:#1B558F;
+    --cobalt-soft:#E7EEF6;
+    --marigold:#B87310;
+    --marigold-soft:#F7EEDD;
+    --shadow:0 1px 2px rgba(22,33,31,.05), 0 8px 24px -18px rgba(22,33,31,.28);
+
+    --serif:"Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;
+    --sans:"Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#111614;
+      --card:#181F1D;
+      --ink:#E7EDE9;
+      --ink-2:#A8B7B2;
+      --ink-3:#7B8A85;
+      --rule:#2A3431;
+      --rule-soft:#212A28;
+      --cobalt:#8CB7E4;
+      --cobalt-soft:#1B2733;
+      --marigold:#E3B36B;
+      --marigold-soft:#2B2418;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -20px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#111614;
+    --card:#181F1D;
+    --ink:#E7EDE9;
+    --ink-2:#A8B7B2;
+    --ink-3:#7B8A85;
+    --rule:#2A3431;
+    --rule-soft:#212A28;
+    --cobalt:#8CB7E4;
+    --cobalt-soft:#1B2733;
+    --marigold:#E3B36B;
+    --marigold-soft:#2B2418;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -20px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px 96px}
+
+  /* ---------- masthead ---------- */
+  header.mast{
+    border-bottom:1px solid var(--rule);
+    padding:56px 0 30px;
+    margin-bottom:34px;
+  }
+  .kicker{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:900;
+    font-size:clamp(34px,6.2vw,54px);
+    line-height:1.18;
+    letter-spacing:.01em;
+    margin:0 0 16px;
+    text-wrap:balance;
+  }
+  .dek{
+    font-size:16.5px;
+    color:var(--ink-2);
+    max-width:37em;
+    margin:0 0 30px;
+  }
+  .dek b{color:var(--ink);font-weight:500}
+
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(128px,1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:3px;
+    overflow:hidden;
+  }
+  .stat{background:var(--card);padding:14px 16px}
+  .stat dt{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin:0 0 4px;
+  }
+  .stat dd{
+    margin:0;
+    font-family:var(--mono);
+    font-variant-numeric:tabular-nums;
+    font-weight:600;
+    font-size:19px;
+    color:var(--ink);
+  }
+  .stat dd.hi{color:var(--cobalt)}
+  .stat dd small{font-size:12px;font-weight:400;color:var(--ink-3)}
+
+  /* ---------- method ---------- */
+  .method{
+    border-left:2px solid var(--cobalt);
+    padding:2px 0 2px 20px;
+    margin:0 0 46px;
+    color:var(--ink-2);
+    font-size:15px;
+    max-width:40em;
+  }
+  .method p{margin:0 0 10px}
+  .method p:last-child{margin:0}
+  .method code{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink);
+    background:var(--rule-soft);
+    padding:1px 5px;
+    border-radius:2px;
+  }
+
+  /* ---------- sections ---------- */
+  section{margin:0 0 40px}
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    flex-wrap:wrap;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:6px;
+  }
+  .sec-head h2{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:22px;
+    margin:0;
+    letter-spacing:.02em;
+  }
+  .who{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .who.baby{background:var(--cobalt-soft);color:var(--cobalt)}
+  .who.kid{background:var(--marigold-soft);color:var(--marigold)}
+  .who.grown{background:var(--rule-soft);color:var(--ink-2)}
+  .sec-note{font-size:13.5px;color:var(--ink-3);margin:0}
+
+  /* ---------- book rows ---------- */
+  ol.books{list-style:none;margin:0;padding:0}
+  li.book{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:0 16px;
+    padding:22px 0;
+    border-bottom:1px solid var(--rule-soft);
+  }
+  li.book:last-child{border-bottom:0}
+
+  .tick{
+    grid-row:1 / span 3;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding-top:3px;
+  }
+  .num{
+    font-family:var(--mono);
+    font-variant-numeric:tabular-nums;
+    font-size:12px;
+    font-weight:600;
+    color:var(--ink-3);
+    width:2.2ch;
+    text-align:right;
+  }
+  .tick input{
+    appearance:none;
+    -webkit-appearance:none;
+    width:16px;height:16px;
+    margin:0;
+    border:1.5px solid var(--rule);
+    border-radius:2px;
+    background:var(--card);
+    cursor:pointer;
+    display:grid;
+    place-content:center;
+    transition:border-color .12s ease, background .12s ease;
+  }
+  .tick input:hover{border-color:var(--cobalt)}
+  .tick input:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+  .tick input:checked{background:var(--cobalt);border-color:var(--cobalt)}
+  .tick input:checked::after{
+    content:"";
+    width:8px;height:4.5px;
+    border-left:2px solid var(--card);
+    border-bottom:2px solid var(--card);
+    transform:translateY(-1px) rotate(-45deg);
+  }
+  li.book.done .title,
+  li.book.done .meta,
+  li.book.done .why,
+  li.book.done .proof{opacity:.42}
+
+  .head-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .title{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:19.5px;
+    line-height:1.4;
+    margin:0;
+    text-wrap:balance;
+  }
+  .price{
+    font-family:var(--mono);
+    font-variant-numeric:tabular-nums;
+    font-size:13px;
+    white-space:nowrap;
+    color:var(--ink-3);
+  }
+  .price s{text-decoration-thickness:1px}
+  .price b{color:var(--cobalt);font-weight:600;font-size:14.5px}
+  .meta{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-3);
+    margin:5px 0 12px;
+    letter-spacing:.01em;
+  }
+  .meta span+span::before{content:" · ";color:var(--rule)}
+
+  .why{margin:0 0 10px;font-size:15.3px;color:var(--ink)}
+  .why b{
+    font-weight:500;
+    background:linear-gradient(transparent 62%, var(--marigold-soft) 62%);
+  }
+  .proof{
+    margin:0;
+    font-size:14.2px;
+    color:var(--ink-2);
+    padding-left:14px;
+    border-left:2px solid var(--rule);
+  }
+  .proof strong{
+    display:block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    margin-bottom:2px;
+  }
+
+  /* ---------- notes / sources ---------- */
+  .panel{
+    background:var(--card);
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:24px 26px;
+    box-shadow:var(--shadow);
+    margin:0 0 22px;
+  }
+  .panel h3{
+    font-family:var(--serif);
+    font-size:17.5px;
+    font-weight:700;
+    margin:0 0 12px;
+  }
+  .panel ul{margin:0;padding-left:1.15em}
+  .panel li{margin-bottom:9px;font-size:14.8px;color:var(--ink-2)}
+  .panel li:last-child{margin-bottom:0}
+  .panel li b{color:var(--ink);font-weight:500}
+  .tag{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:2px 6px;
+    border-radius:2px;
+    background:var(--marigold-soft);
+    color:var(--marigold);
+    margin-right:6px;
+    vertical-align:1.5px;
+  }
+
+  a{color:var(--cobalt);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+  .srcs{columns:2;column-gap:34px;font-size:13px;line-height:1.65;color:var(--ink-2)}
+  .srcs p{margin:0 0 8px;break-inside:avoid}
+  @media (max-width:640px){
+    .srcs{columns:1}
+    li.book{gap:0 12px}
+    .proof{font-size:13.8px}
+  }
+  footer.foot{
+    margin-top:46px;
+    padding-top:18px;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.05em;
+    color:var(--ink-3);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="mast">
+  <p class="kicker">出版社特價書單 · 篩選報告</p>
+  <h1>雙寶書單三十選</h1>
+  <p class="dek">從這份 <b>1,792 本</b>的特價書單裡，挑給一個<b>大寶三歲、二寶剛出生</b>的家庭。每本都經過網路口碑、得獎紀錄、家長社群討論度的交叉查證，並附上證明來源。全品項特價一律 <b>NT$150</b>，所以這裡不比價格，只比「你家現在真的用得到」。</p>
+  <dl class="stats">
+    <div class="stat"><dt>推薦本數</dt><dd>30 <small>本</small></dd></div>
+    <div class="stat"><dt>定價總計</dt><dd>9,948</dd></div>
+    <div class="stat"><dt>特價總計</dt><dd class="hi">4,500</dd></div>
+    <div class="stat"><dt>省下</dt><dd class="hi">5,448</dd></div>
+    <div class="stat"><dt>平均折數</dt><dd>4.5 <small>折</small></dd></div>
+  </dl>
+</header>
+
+<div class="method">
+  <p>篩選路徑：<code>1,792 本</code> → 只留「親子共享」大類 <code>490 本</code> → 排除橋梁書、國小以上漫畫、青少年教養（如《狼人生存遊戲》《學科男孩》《青少年使用說明書》，你們還有好幾年才用得到）→ 得出 <code>0–4 歲＋新手爸媽</code> 適用池 → 依網路口碑與社群證明強度排序取 <code>30 本</code>。</p>
+  <p>配比刻意做成 <b>25 本孩子的書 ＋ 5 本爸媽的書</b>：新生兒第一年，爸媽自己的工具書其實比繪本更常翻。</p>
+</div>
+
+<!-- ============ 1 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who baby">給新生兒</span>
+    <h2>視覺刺激圖卡</h2>
+  </div>
+  <p class="sec-note">0–6 個月的視力約只有 0.1–0.6，這階段黑白高對比幾乎是唯一「看得清楚」的內容。一次買齊三盒，可以輪替避免看膩。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b1">
+      <div class="tick"><span class="num">01</span><input type="checkbox" aria-label="已選 0歲baby視覺圖卡：Smile篇"></div>
+      <div class="head-row"><h3 class="title">0歲baby視覺圖卡：Smile篇</h3><p class="price"><s>220</s> → <b>150</b></p></div>
+      <p class="meta"><span>小時報編輯部</span><span>時報文化</span><span>4712966623853</span></p>
+      <div>
+        <p class="why">一盒 20 張、40 種圖案，<b>圓角＋環保大豆油墨</b>，可以單卡夾在嬰兒床欄或推車上左右移動，練追視。這是「出生第一週就能開始用」的少數品項。</p>
+        <p class="proof"><strong>社群證明</strong>臺北榮總兒童醫學部小兒精神科主治醫師<b>許庭榕</b>掛名推薦；媽咪愛「0~3 歲寶寶必備視覺圖卡」為長期常態團購品項，商品頁點名隋棠、賈靜雯家寶寶使用，並提到高價月子中心會在嬰兒床四周貼黑白圖卡。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b2">
+      <div class="tick"><span class="num">02</span><input type="checkbox" aria-label="已選 0歲baby視覺圖卡2"></div>
+      <div class="head-row"><h3 class="title">0歲baby視覺圖卡 2</h3><p class="price"><s>220</s> → <b>150</b></p></div>
+      <p class="meta"><span>小時報編輯部</span><span>時報文化</span><span>4712966622788</span></p>
+      <div>
+        <p class="why">與 Smile 篇<b>圖案不重複</b>。視覺刺激最怕的是重複疲乏，兩盒交替使用才有意義——這也是為什麼它幾乎不單賣。</p>
+        <p class="proof"><strong>社群證明</strong>媽咪愛長期以「0歲baby視覺圖卡 2 ＋ 0歲baby視覺圖卡 共二盒」的組合開團，是新手爸媽最常一次購入的搭配方式。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b3">
+      <div class="tick"><span class="num">03</span><input type="checkbox" aria-label="已選 1歲baby動物圖卡"></div>
+      <div class="head-row"><h3 class="title">1歲baby動物圖卡</h3><p class="price"><s>199</s> → <b>150</b></p></div>
+      <p class="meta"><span>小時報編輯部</span><span>時報文化</span><span>4712966620012</span></p>
+      <div>
+        <p class="why">先買下「接下來 12 個月要用的」。而且這盒<b>兩個孩子可以共用</b>：三歲的哥哥/姐姐拿它玩指認與命名遊戲，同時是他「教弟弟妹妹」的教具，對手足關係比多買一本繪本有用。</p>
+        <p class="proof"><strong>社群證明</strong>同屬媽咪愛「0~3 歲寶寶必備視覺圖卡」團購系列的階段延伸卡，與 0 歲視覺卡為同一產品線。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 2 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who kid">給三歲</span>
+    <h2>手動互動．最不容易被放棄的書型</h2>
+  </div>
+  <p class="sec-note">三歲的注意力靠「我造成了改變」撐住。這五本都是孩子動手、書才會前進的類型，也是抱著新生兒單手唸也撐得住的形式。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b4">
+      <div class="tick"><span class="num">04</span><input type="checkbox" aria-label="已選 0～3歲玩出好腦力"></div>
+      <div class="head-row"><h3 class="title">0～3歲玩出好腦力：紅色圓形是哪個？</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>清水大介</span><span>小熊</span><span>9786267140246</span></p>
+      <div>
+        <p class="why">問答式手指遊戲書，一次涵蓋顏色、形狀、數數、大小、排序——三歲正是這幾個概念的黃金期。<b>由孩子回答、家長只需提問</b>，比單向唸故事省力太多。</p>
+        <p class="proof"><strong>社群證明</strong>獲日本 <b>MOE 繪本屋大賞「爸爸媽媽獎」</b>——由實際育兒的家長投票產生，是日本家長社群認可度最直接的獎項。在台已推出《紅色圓形有幾個？》《紅色小鼓拍一拍》姊妹作，屬長銷系列。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b5">
+      <div class="tick"><span class="num">05</span><input type="checkbox" aria-label="已選 按按鈕，好好玩"></div>
+      <div class="head-row"><h3 class="title">按按鈕，好好玩！The Button Book</h3><p class="price"><s>380</s> → <b>150</b></p></div>
+      <p class="meta"><span>Sally Nicholls／Bethan Woollvin</span><span>小熊</span><span>9786267429662</span></p>
+      <div>
+        <p class="why">動物在森林裡發現一顆按鈕，按下去會發生什麼？孩子預測、動作、大笑，循環十次都不膩。<b>附中英雙語 QR Code 音檔</b>——你在餵奶的時候，他可以自己聽。</p>
+        <p class="proof"><strong>社群證明</strong>幼教學者<b>邱瓊慧教授</b>撰寫專業導讀；原作 The Button Book 在英美是操作書經典，台灣 KIDsREAD 等點讀筆品牌另外推出點讀版本，代表這本的需求穩定到值得二次開發。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b6">
+      <div class="tick"><span class="num">06</span><input type="checkbox" aria-label="已選 不要打開這本書"></div>
+      <div class="head-row"><h3 class="title">不要打開這本書！Don’t Open This Book!</h3><p class="price"><s>380</s> → <b>150</b></p></div>
+      <p class="meta"><span>Ralf Butschkow</span><span>小熊</span><span>9786267429761</span></p>
+      <div>
+        <p class="why">書會要求孩子<b>拍動物屁股、對書吹氣、把書倒過來搖</b>，黑白動物就變成彩色。把閱讀變成全身遊戲，適合放電用；同樣附雙語音檔。</p>
+        <p class="proof"><strong>社群證明</strong>同由邱瓊慧教授導讀。「不要打開這本書」這個題型在台灣有多家出版社（大穎、時報等）推出不同版本，是家長社群公認的高勝率互動書類型；文化部兒童文化館亦收錄同類作品。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b7">
+      <div class="tick"><span class="num">07</span><input type="checkbox" aria-label="已選 合起來，翻開"></div>
+      <div class="head-row"><h3 class="title">合起來，翻開！</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>松田奈那子</span><span>時報文化</span><span>9786264193184</span></p>
+      <div>
+        <p class="why">用「紙對折再展開」的水彩實驗當故事。看完可以<b>直接拿紙和顏料重現</b>——一本書變成一個下午的活動，這對在家帶兩個孩子的日子是實質幫助。</p>
+        <p class="proof"><strong>社群證明</strong>書店端與《吹一下》合為「松田奈那子的創意繪本組」販售（博客來、三民、時報悅讀皆以雙書組上架）；出版方定位為「是繪本也是創意學習單」，親子部落客（如鴨捲媽）有實作共讀紀錄。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b8">
+      <div class="tick"><span class="num">08</span><input type="checkbox" aria-label="已選 吹一下，變成什麼了"></div>
+      <div class="head-row"><h3 class="title">吹一下，變成什麼了？</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>松田奈那子</span><span>時報文化</span><span>9786264193238</span></p>
+      <div>
+        <p class="why">利用顏料未乾時吹氣，讓顏色向四周延伸變形。<b>三歲已能控制吹氣</b>，是少數「孩子真的做得到、不會挫敗」的美感類繪本。與上一本同組，建議一起收。</p>
+        <p class="proof"><strong>社群證明</strong>與《合起來，翻開！》同為時報幼幼線主推的雙書組；出版社官方 YouTube 有「看繪本也能玩創意遊戲」示範影片，說明其操作性是主要賣點。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 3 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who kid">給三歲</span>
+    <h2>弟弟妹妹來了</h2>
+  </div>
+  <p class="sec-note">這一組是你們家現在最該有的。重點不在教大寶「要愛弟弟妹妹」，而是先讓他把不高興說出來。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b9">
+      <div class="tick"><span class="num">09</span><input type="checkbox" aria-label="已選 我不想要弟弟"></div>
+      <div class="head-row"><h3 class="title">我不想要弟弟！</h3><p class="price"><s>380</s> → <b>150</b></p></div>
+      <p class="meta"><span>納特・阿摩爾</span><span>時報文化</span><span>9786264446105</span></p>
+      <div>
+        <p class="why">主角原本很期待弟弟出生，但弟弟來了以後爸媽的互動變了，她在雪地裡大喊「我不要小嬰兒了！」<b>先允許大寶說出這句話，退化和爭寵才有出口</b>——這本沒有急著跳到相親相愛，這正是它比多數手足繪本好用的地方。</p>
+        <p class="proof"><strong>社群證明</strong>手足主題是台灣家長社群長年的熱門需求：親子天下「小雨麻聊繪本」有手足主題書單、妞新聞做過〈10 本適合大寶的手足繪本〉、PTT BabyMother 板長年有「二寶來到的繪本請益」討論串。本書切在「大寶生氣期」而非結論期，是這類清單裡相對缺乏的角度。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b10">
+      <div class="tick"><span class="num">10</span><input type="checkbox" aria-label="已選 當你出生的時候"></div>
+      <div class="head-row"><h3 class="title">當你出生的時候</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>艾瑪・達德</span><span>時報文化</span><span>9789571387710</span></p>
+      <div>
+        <p class="why">從爸媽的視角寫「你出生那天，我的世界變了」。可以唸給新生兒聽，<b>更該唸給三歲的哥哥/姐姐聽</b>——提醒他，他出生時你們也是這樣。一本書處理兩個孩子。</p>
+        <p class="proof"><strong>社群證明</strong>作者艾瑪‧達德 2010 年以《I Love My Mummy》獲<b>英國圖書信託基金會幼兒讀物獎</b>，2011 年以《I Love Bugs》入圍<b>凱特‧格林威獎</b>；媽咪愛列為 1–3 歲家長伴讀、床邊故事推薦品。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b11">
+      <div class="tick"><span class="num">11</span><input type="checkbox" aria-label="已選 越來越愛你"></div>
+      <div class="head-row"><h3 class="title">越來越愛你</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>艾瑪・達德／李貞慧 譯</span><span>時報文化</span><span>9789571385082</span></p>
+      <div>
+        <p class="why">短句、疊字、押韻，<b>可以連唸十次都不會煩</b>——這是睡前書最重要的規格。同一套視覺語言下還有《小小的我》《每天說愛你》，喜歡的話可以延伸。</p>
+        <p class="proof"><strong>社群證明</strong>由親子共讀推手<b>李貞慧</b>（以英文繪本導讀著稱的國中教師）翻譯；時報以「甜到心坎裡的親子繪本」主打，博客來曾推出全球獨家限量附贈身高尺版本，屬持續加印的長銷品。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 4 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who kid">給三歲</span>
+    <h2>情緒與生活抗拒</h2>
+  </div>
+  <p class="sec-note">三歲的崩潰不是不聽話，是還沒有語言。這六本各自對付一個真實戰場：生氣、焦慮、睡覺、刷牙、尿布。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b12">
+      <div class="tick"><span class="num">12</span><input type="checkbox" aria-label="已選 趕走生氣怪獸"></div>
+      <div class="head-row"><h3 class="title">趕走生氣怪獸</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>紡爸爸 tsumupapa</span><span>小熊</span><span>9786267140581</span></p>
+      <div>
+        <p class="why">最實用的一本。三個原則直接可以貼在冰箱上：<b>不可以傷害別人、不可以傷害自己、不可以破壞東西</b>——生氣本身不禁止。另附 5 個三歲做得到的消氣方法。</p>
+        <p class="proof"><strong>社群證明</strong>作者 tsumupapa 為 IG 超人氣畫家；由<b>日本憤怒管理協會代表理事安藤俊介</b>（該領域日本權威）監修；出版社明確標示適讀 3 歲以上，是少數敢把年齡下限標到三歲的情緒管理書。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b13">
+      <div class="tick"><span class="num">13</span><input type="checkbox" aria-label="已選 注意！情緒怪獸來襲"></div>
+      <div class="head-row"><h3 class="title">注意！情緒怪獸來襲</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>蘿蘭・史塔克莉／艾倫・蘇瑞</span><span>小熊</span><span>9786267224106</span></p>
+      <div>
+        <p class="why">把生氣、擔心、害怕、悲傷各自畫成怪獸，並說明<b>它為什麼存在</b>（害怕讓人反應快、悲傷讓人看清什麼重要），不是叫孩子別哭。書末給深呼吸、蝴蝶式擁抱、兒童瑜伽等具體工具。</p>
+        <p class="proof"><strong>社群證明</strong>書評社群普遍以「<b>怪獸版《腦筋急轉彎》</b>」形容；隨書附 QR Code 可下載「情緒表達親子遊戲單」，是家長討論中最常被點名的加值設計。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b14">
+      <div class="tick"><span class="num">14</span><input type="checkbox" aria-label="已選 腦袋裡的小狗"></div>
+      <div class="head-row"><h3 class="title">腦袋裡的小狗──給孩子的正念繪本</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>艾莉斯・葛拉維</span><span>時報文化</span><span>9786263969650</span></p>
+      <div>
+        <p class="why">作者的孩子焦慮到睡不著，於是她把焦慮畫成<b>一隻需要被照顧的小狗</b>。孩子聽不懂「情緒」，但完全懂怎麼照顧小狗。解法只有一個：呼吸。</p>
+        <p class="proof"><strong>社群證明</strong>推薦人包含<b>林麗玲</b>（正念減壓導師、親子正念教養專家）、<b>陳志恆</b>（諮商心理師、暢銷作家）、<b>魏瑋志（澤爸）</b>（親職教育講師）；讀者評價的共同關鍵字是「文字非常簡單、沒有說教性」。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b15">
+      <div class="tick"><span class="num">15</span><input type="checkbox" aria-label="已選 假裝去睡覺"></div>
+      <div class="head-row"><h3 class="title">假裝去睡覺：啵啵妮晚安繪本</h3><p class="price"><s>280</s> → <b>150</b></p></div>
+      <p class="meta"><span>蠟筆哥哥</span><span>時報文化</span><span>9789571377919</span></p>
+      <div>
+        <p class="why">新生兒期最稀缺的資源是睡眠。這本專門處理<b>不想睡、裝睡、拖延</b>，用幽默而不是說服——三歲對「被說服」免疫，對好笑沒有抵抗力。</p>
+        <p class="proof"><strong>社群證明</strong>作者蠟筆哥哥（姚伯勳）為台灣知名親子說故事創作者，作品長期在時報童書線；同作者《走失了，怎麼辦？》獲多位兒童安全與幼教專家掛名推薦，見第 22 項。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b16">
+      <div class="tick"><span class="num">16</span><input type="checkbox" aria-label="已選 蛀牙了，怎麼辦"></div>
+      <div class="head-row"><h3 class="title">蛀牙了，怎麼辦？</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>錵九九</span><span>時報文化</span><span>9786263358362</span></p>
+      <div>
+        <p class="why">三歲抗拒刷牙、抗拒看牙醫幾乎是全體共通。<b>先讓故事解釋「牙齒會發生什麼事」，比在浴室裡對抗有效</b>；也預先降低第一次看牙的恐懼。</p>
+        <p class="proof"><strong>社群證明</strong>屬時報「怎麼辦？」生活情境繪本系列（與《走失了，怎麼辦？》同型）。這類「一本書解一個抗拒行為」的書型，是家長社群在遇到具體卡關時最常互相推薦的形式。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b17">
+      <div class="tick"><span class="num">17</span><input type="checkbox" aria-label="已選 蔬菜穿內褲"></div>
+      <div class="head-row"><h3 class="title">蔬菜穿內褲</h3><p class="price"><s>250</s> → <b>150</b></p></div>
+      <p class="meta"><span>賈瑞德・查普曼</span><span>時報文化</span><span>9789571366784</span></p>
+      <div>
+        <p class="why">戒尿布期的神級笑點書。押韻文字適合大聲唸，而且<b>蔬菜們是在還包著尿布的紅蘿蔔寶寶面前炫耀內褲</b>——內建「長大真好」的動機，剛好家裡真的有一個包尿布的寶寶可以對照。</p>
+        <p class="proof"><strong>社群證明</strong>原作 Vegetables in Underwear（Jared Chapman）被美國權威童書書評《<b>Horn Book</b>》形容為「guaranteed preschool hilarity」；<b>NPR</b> 曾以本書為例製作「讓孩子笑出聲的童書」專題；系列已延伸出睡衣篇、萬聖節篇等多本。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 5 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who kid">給三歲</span>
+    <h2>大師經典．重複耐受度最高</h2>
+  </div>
+  <p class="sec-note">這四本是「會被要求再唸一次」的類型。作者都是台灣家長社群長期驗證過的名字。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b18">
+      <div class="tick"><span class="num">18</span><input type="checkbox" aria-label="已選 我需要抱抱"></div>
+      <div class="head-row"><h3 class="title">我需要抱抱</h3><p class="price"><s>260</s> → <b>150</b></p></div>
+      <p class="meta"><span>艾倫・布雷比</span><span>時報文化</span><span>9789571374048</span></p>
+      <div>
+        <p class="why">短、狠、好笑，孩子會自己抱著書來要求重複。額外的好處是：弟弟妹妹來了以後，這本<b>給了他「我可以要求擁抱」的語言</b>——比爸媽提醒他有效。</p>
+        <p class="proof"><strong>社群證明</strong>作者艾倫‧布雷比作品譯成多國語言、在<b>超過 25 個國家</b>出版；媽咪愛以「艾倫‧布雷比大師繪本系列」多本成組開團，是台灣少數以作者名成套販售的外版童書。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b19">
+      <div class="tick"><span class="num">19</span><input type="checkbox" aria-label="已選 巴戈狗豬豬"></div>
+      <div class="head-row"><h3 class="title">巴戈狗豬豬</h3><p class="price"><s>260</s> → <b>150</b></p></div>
+      <p class="meta"><span>艾倫・布雷比</span><span>時報文化</span><span>9789571368900</span></p>
+      <div>
+        <p class="why">系列首作。一隻脾氣壞、沒禮貌、不肯分享的巴戈狗，被稱為<b>「全世界最可愛的負面教材」</b>——用反面角色講分享，三歲接受度遠高於正向勸說。手足家庭正需要。</p>
+        <p class="proof"><strong>社群證明</strong>出版社與書店明確標示「<b>強烈推薦給 3 至 5 歲的孩子</b>」；讀者評價集中在「文字的節奏和韻律超棒、插圖非常滑稽」；金石堂另有「巴戈狗豬豬系列套書（全三冊）」上架，代表銷售穩定到可成套。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b20">
+      <div class="tick"><span class="num">20</span><input type="checkbox" aria-label="已選 傳說中的巧克力"></div>
+      <div class="head-row"><h3 class="title">傳說中的巧克力</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>宮西達也</span><span>小熊</span><span>9786267224687</span></p>
+      <div>
+        <p class="why">宮西達也是台灣家長最熟的繪本作者之一（霸王龍系列）。這本講善意如何一路傳下去，<b>順帶介紹可可果與巧克力製程，書末附 DIY</b>——故事＋知識＋動手，一本吃三種。</p>
+        <p class="proof"><strong>社群證明</strong>專業童書店小書蟲童書坊站內宮西達也相關品項達 <b>107 筆</b>，是在台流通量的直接指標；讀書共和國另推出「繪本大師宮西達也套書（共 8 冊）」官網獨家組合。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b21">
+      <div class="tick"><span class="num">21</span><input type="checkbox" aria-label="已選 貓頭鷹，醒醒啊"></div>
+      <div class="head-row"><h3 class="title">貓頭鷹，醒醒啊！</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>五味太郎</span><span>小熊</span><span>9786267538821</span></p>
+      <div>
+        <p class="why">五味太郎的<b>大色塊、簡約構圖</b>對三歲的視覺辨識最友善；「相信孩子」系列敘事留白多，孩子會自己補故事——這種書愈唸愈長，不是愈唸愈膩。</p>
+        <p class="proof"><strong>社群證明</strong>五味太郎著作累計逾 <b>450 本</b>，《小金魚逃走了》《鱷魚怕怕牙醫怕怕》為台灣幼兒園常備書；同作者《五味太郎的生活繪本》曾獲<b>文化部中小學優良課外讀物推介</b>與<b>台北市兒童深耕閱讀優良媒材</b>；台東大學兒童文學相關評析專文討論其「可以對話的繪本」特質。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 6 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who kid">給三歲</span>
+    <h2>安全與身體．兩個孩子之後風險真的變高</h2>
+  </div>
+  <p class="sec-note">一個人帶兩個孩子出門，走失與小意外的機率是實質上升的。這四本不是知識書，是預先演練。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b22">
+      <div class="tick"><span class="num">22</span><input type="checkbox" aria-label="已選 走失了，怎麼辦"></div>
+      <div class="head-row"><h3 class="title">走失了，怎麼辦？</h3><p class="price"><s>300</s> → <b>150</b></p></div>
+      <p class="meta"><span>蠟筆哥哥</span><span>時報文化</span><span>9789571382241</span></p>
+      <div>
+        <p class="why">給的是可以背下來的四步：<b>原地不動、找「對的人」求助、報警、不跟陌生人走</b>。故事主角樂樂在鬧區跟媽媽走散，孩子會把自己代入。</p>
+        <p class="proof"><strong>社群證明</strong>推薦人包含<b>林月琴</b>（靖娟兒童安全文教基金會執行長）、<b>涂妙如</b>（輔仁大學副教授）等兒童安全與幼教專業人士——這是這本書社群信任度的主要來源。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b23">
+      <div class="tick"><span class="num">23</span><input type="checkbox" aria-label="已選 100招自我保護的安全知識繪本"></div>
+      <div class="head-row"><h3 class="title">100招自我保護的安全知識繪本</h3><p class="price"><s>370</s> → <b>150</b></p></div>
+      <p class="meta"><span>宮田美惠子／伊藤倉鼠 繪</span><span>小熊</span><span>9786267361856</span></p>
+      <div>
+        <p class="why">交通安全、身心保健、意外預防、犯罪預防、災害預防五大主題共 100 題 QA。<b>可以當「一天一題」的長期用書，用到小學都不浪費</b>——三歲先挑得懂的問，其餘留著。</p>
+        <p class="proof"><strong>社群證明</strong>作者宮田美惠子為<b>日本兒童安全教育專家</b>；書末附「幫幫我！卡片」、「安全約定貼紙」、「家庭安全協議」，是家長討論中最常被提到的實用加值。國立公共資訊圖書館電子書館藏亦收錄本書。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b24">
+      <div class="tick"><span class="num">24</span><input type="checkbox" aria-label="已選 受傷了，我不怕"></div>
+      <div class="head-row"><h3 class="title">受傷了，我不怕！（21個親子必學急救護理法）</h3><p class="price"><s>370</s> → <b>150</b></p></div>
+      <p class="meta"><span>WILL兒童智育研究所／川原瑞丸 繪</span><span>小熊</span><span>9786267654132</span></p>
+      <div>
+        <p class="why">一個情境一個跨頁、<b>每招只 2–4 步圖解</b>，慌的時候真的翻得到。涵蓋跌倒擦傷清洗、燙傷降溫、水中抽筋、蜂螫、動物咬傷、魚刺卡喉等 21 種。爸媽自己也順便複習。</p>
+        <p class="proof"><strong>社群證明</strong>屬小熊出版安全知識線，與《100招自我保護》常被家長一起入手；設計邏輯是「孩子看得懂、能自己執行前幾步」，這是它與一般成人急救手冊被區分開來的原因。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b25">
+      <div class="tick"><span class="num">25</span><input type="checkbox" aria-label="已選 出動！英勇消防隊"></div>
+      <div class="head-row"><h3 class="title">出動！英勇消防隊</h3><p class="price"><s>320</s> → <b>150</b></p></div>
+      <p class="meta"><span>鎌田步</span><span>小熊</span><span>9789865503925</span></p>
+      <div>
+        <p class="why">接住三歲的交通工具熱期。鎌田步把<b>消防車種類、內部結構、消防員裝備</b>畫得極精確，能滿足「還要看細節」的孩子；同時是最溫和的災害概念入門。</p>
+        <p class="proof"><strong>社群證明</strong>由<b>新北市政府消防局局長黃德清審訂推薦</b>；鎌田步以交通工具繪本著稱（車、飛機、火車、輪船甚至電塔），作品在台由小熊出版持續引進。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ 7 ============ -->
+<section>
+  <div class="sec-head">
+    <span class="who grown">給爸媽</span>
+    <h2>新生兒第一年，你們自己的工具書</h2>
+  </div>
+  <p class="sec-note">這五本刻意留了名額。半夜三點會翻的不是繪本。前兩本是「醫療判斷」，中間兩本是「情緒與手足」，最後一本是「怎麼把買回來的繪本用好」。</p>
+  <ol class="books">
+
+    <li class="book" data-id="b26">
+      <div class="tick"><span class="num">26</span><input type="checkbox" aria-label="已選 輕鬆當爸媽，孩子更健康"></div>
+      <div class="head-row"><h3 class="title">輕鬆當爸媽，孩子更健康【最新增修版】</h3><p class="price"><s>550</s> → <b>150</b></p></div>
+      <p class="meta"><span>黃瑽寧</span><span>時報文化</span><span>9786264197540</span><span>本清單折扣最深</span></p>
+      <div>
+        <p class="why">整份清單裡<b>省最多的一本（省 400 元）</b>，也是新生兒階段最會被翻爛的一本。從孕期、疫苗、睡眠、餵食一路到「什麼時候該送醫」——半夜手足無措的時候，這本的價值不是 150 元。</p>
+        <p class="proof"><strong>社群證明</strong>2010 年初版至今<b>年年再刷、累銷破 12 萬冊</b>，曾盤據暢銷榜長達四年；獲<b>2011 年衛生署國民健康局「健康好書推介」</b>；出版方引述資料指台灣約四分之一新手爸媽以本書為主要育兒知識來源。作者黃瑽寧為長期活躍的兒科醫師與親子天下專欄作者。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b27">
+      <div class="tick"><span class="num">27</span><input type="checkbox" aria-label="已選 阿包醫生陪你養寶包"></div>
+      <div class="head-row"><h3 class="title">阿包醫生陪你養寶包</h3><p class="price"><s>380</s> → <b>150</b></p></div>
+      <p class="meta"><span>巫漢盟（阿包醫生）</span><span>時報文化</span><span>9789571382234</span></p>
+      <div>
+        <p class="why">寫的正是 0–1 歲的日常難題：<b>父母睡不飽、寶寶的吃喝拉睡、生病怎麼判斷</b>。與上一本的分工是——黃瑽寧偏系統與醫學脈絡，阿包醫生偏「今天遇到的這件事怎麼辦」。隨書贈《育兒常見難題手冊》可以放媽媽包。</p>
+        <p class="proof"><strong>社群證明</strong>作者 FB 粉專「阿包醫生陪你養寶包」逾 <b>14 萬追蹤</b>，並為<b>親子天下嚴選作者</b>、聯合元氣網專欄作者；書評普遍評為「能解決新手爸媽約八成的日常育兒問題」。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b28">
+      <div class="tick"><span class="num">28</span><input type="checkbox" aria-label="已選 教養的秘密"></div>
+      <div class="head-row"><h3 class="title">教養的秘密【15萬冊暢銷版】</h3><p class="price"><s>399</s> → <b>150</b></p></div>
+      <p class="meta"><span>王宏哲</span><span>時報文化</span><span>9789571391014</span></p>
+      <div>
+        <p class="why">選這本不是因為它有名，是因為它的章節<b>涵蓋手足教育、獨生子女教養、親子溝通</b>——正好對上「大寶三歲＋二寶剛出生」這一年最集中的手足調適問題。</p>
+        <p class="proof"><strong>社群證明</strong>突破 <b>15 萬冊</b>，作者粉絲逾 <b>137 萬</b>；王宏哲多本教養著作（《孩子的教養，你做對了嗎？》《教孩子比 IQ 更重要的事》）皆曾登<b>博客來教養類暢銷榜首</b>。作者身分為兒童發展專家，內容以醫學、心理、行為研究為基礎。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b29">
+      <div class="tick"><span class="num">29</span><input type="checkbox" aria-label="已選 崩潰媽媽的自救指南"></div>
+      <div class="head-row"><h3 class="title">崩潰媽媽的自救指南</h3><p class="price"><s>380</s> → <b>150</b></p></div>
+      <p class="meta"><span>卡拉・納姆柏格</span><span>時報文化</span><span>9789571383972</span></p>
+      <div>
+        <p class="why">這本不是教你管小孩，是<b>教你管自己的爆炸</b>。雙寶家庭第一年最需要的其實是這個：減少發飆的五種方法、為情緒導火線滅火的三大步驟。書名寫媽媽，但爸爸更該讀。</p>
+        <p class="proof"><strong>社群證明</strong>作者為<b>臨床社工博士</b>，起點是她自己 Google「如何停止對孩子大吼大叫」；Amazon 讀者評「不但有用，還改變了我的生活」，《<b>BookPage 書頁</b>》雜誌評「淺顯易懂，充滿樂趣」；台灣<b>關鍵評論網</b>曾專文摘錄書中「七個讓親職角色充滿挑戰的原因」。</p>
+      </div>
+    </li>
+
+    <li class="book" data-id="b30">
+      <div class="tick"><span class="num">30</span><input type="checkbox" aria-label="已選 說故事與親子共讀"></div>
+      <div class="head-row"><h3 class="title">說故事與親子共讀：從零開始</h3><p class="price"><s>350</s> → <b>150</b></p></div>
+      <p class="meta"><span>林美琴</span><span>時報文化</span><span>9789571396743</span></p>
+      <div>
+        <p class="why">買了前面 25 本之後的<b>使用說明書</b>。分 0 歲、1–2 歲、幼兒期三個階段，教對話式共讀、大聲朗讀、討論故事的具體技巧——同一批書，用對方法差很多。書中主張一天 20 分鐘就夠。</p>
+        <p class="proof"><strong>社群證明</strong>作者林美琴曾任<b>教育部「小一閱讀起步走」親子手冊編審委員</b>，長年推廣閱讀教育；書中引述研究指出，嬰幼兒時期即有共讀經驗的孩子，較早發展出書本與文字概念、學習動機較強、親子關係也較密切。</p>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<!-- ============ notes ============ -->
+<div class="panel">
+  <h3>幾個刻意沒選、但你可能會想知道的</h3>
+  <ul>
+    <li><span class="tag">先別買</span><b>《小王子立體書》定價 1,990 → 150（省 1,840，全書單折扣最誇張）。</b>29 個手工立體場景、無刪節完整版，紙藝師劉斯傑設計，收藏價值極高——但三歲會撕。如果要買，請當成<b>你自己的收藏</b>先收起來。《法布爾昆蟲記立體書》1,290 → 150 同理。</li>
+    <li><span class="tag">再等兩年</span><b>《一歲的外公》400 → 150。</b>夏夏文、周見信（金漫獎得主、台東大學兒童文學博士）繪，講失智與衰老，情感層次很好，但適讀年齡實際偏 5 歲以上。</li>
+    <li><span class="tag">可加碼</span><b>《大腦專家親身實證的早期教養法》380 → 150</b>（池谷裕二，東大藥學研究所教授，專講讀懂 0–4 歲的嬰語與行為）、<b>《0-6歲兒童成長手冊》380 → 150</b>（發展里程碑與五大基礎能力檢核）。如果你想再往上加 2 本科學育兒書，就這兩本。</li>
+    <li><span class="tag">可加碼</span><b>《10隻小鴨躲迷藏》380 → 150</b>（中英雙語 QR Code、數數主題）、<b>《我好生氣！》《我不想睡覺！》各 350 → 150</b>（艾曼紐‧雷貝迪）、<b>《世界上最棒的媽媽／爸爸》各 280 → 150</b>——都是同一個路線的安全牌。</li>
+    <li><span class="tag">訂購提醒</span>原始檔案的「數量」欄位，時報品項多為 <b>2</b>、小熊品項多為 <b>3</b>。若那代表每人可訂上限，本清單全部在範圍內；若代表庫存，建議把第 9、26、27 項（手足書與兩本醫療工具書）排在最前面下單。</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h3>查證來源</h3>
+  <div class="srcs">
+    <p><a href="https://www.books.com.tw/">博客來</a>：各書書籍頁（書籍簡介、推薦人名單、得獎紀錄、系列資訊）</p>
+    <p><a href="https://mamilove.com.tw/">媽咪愛</a>：0歲baby視覺圖卡團購頁、艾倫‧布雷比系列團購頁、《當你出生的時候》商品頁</p>
+    <p><a href="https://premium.parenting.com.tw/article/5089831">親子天下</a>：〈給新生兒看黑白圖卡，真的有助於視力發展？〉、小雨麻手足主題繪本書單、阿包醫生嚴選作者頁</p>
+    <p><a href="https://www.bookrep.com.tw/">讀書共和國／小熊出版</a>：《出動！英勇消防隊》《0～3歲玩出好腦力》《傳說中的巧克力》書籍頁與宮西達也套書頁</p>
+    <p><a href="https://www.kidsbook.com.tw/">小書蟲童書坊</a>：宮西達也作品在台流通筆數、《0～3歲玩出好腦力》書介</p>
+    <p><a href="https://www.kingstone.com.tw/">金石堂</a>：《趕走生氣怪獸》《巴戈狗豬豬系列套書》《走失了，怎麼辦？》商品頁</p>
+    <p><a href="https://www.niusnews.com/=P1oocbcb6">妞新聞</a>：〈10本「適合大寶的手足繪本」推薦〉、阿包醫生專訪</p>
+    <p><a href="https://www.ptt.cc/bbs/BabyMother/M.1553743018.A.860.html">PTT BabyMother 板</a>：〈有關於二寶來到的繪本請益〉討論串</p>
+    <p><a href="https://www.thenewslens.com/article/146009">關鍵評論網</a>：《崩潰媽媽的自救指南》書摘專文</p>
+    <p><a href="https://www.npr.org/2018/08/13/638233121/vegetables-in-underwear-and-other-laugh-out-loud-book-ideas-for-kids">NPR</a>：Vegetables in Underwear 童書專題</p>
+    <p><a href="https://www.amazon.com/Vegetables-Underwear-Jared-Chapman/dp/1419723774">Amazon</a>：Horn Book 書評引述、讀者評價</p>
+    <p><a href="https://bbt.nttu.edu.tw/p/404-1060-123568.php?Lang=zh-tw">台東大學兒童文學</a>：〈五味太郎與可以「對話」的繪本〉評析</p>
+    <p><a href="https://www.facebook.com/Dr.wubow/">阿包醫生 FB 粉專</a>：追蹤數</p>
+    <p><a href="https://readmoo.com/">Readmoo 讀墨</a>：作者頁與書籍簡介（艾瑪‧達德得獎紀錄、林美琴著作）</p>
+    <p><a href="https://children.moc.gov.tw/">文化部兒童文化館</a>：同類互動繪本收錄</p>
+    <p><a href="https://ebook.nlpi.edu.tw/">國立公共資訊圖書館</a>：《100招自我保護的安全知識繪本》《輕鬆當爸媽，孩子更健康》館藏</p>
+  </div>
+</div>
+
+<footer class="foot">
+  資料來源：使用者提供之出版社特價書單（1,792 筆）· 書名、ISBN、定價與特價皆已逐筆比對原始檔案 · 社群證明整理於 2026 年 9 月
+</footer>
+</div>
+
+<script>
+(function(){
+  var KEY = "booklist30.checked";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+
+  var items = document.querySelectorAll("li.book");
+  items.forEach(function(li){
+    var box = li.querySelector("input[type=checkbox]");
+    var id = li.getAttribute("data-id");
+    if (!box || !id) return;
+    if (state[id]) { box.checked = true; li.classList.add("done"); }
+    box.addEventListener("change", function(){
+      li.classList.toggle("done", box.checked);
+      state[id] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
